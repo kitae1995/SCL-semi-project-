@@ -1,0 +1,15 @@
+package com.spring.basic.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class reController {
+	
+	@RequestMapping("/retest")
+	public String ReTest() {
+		System.out.println("retest가 호출되었습니다");
+		return "retest";
+	}
+
+}
