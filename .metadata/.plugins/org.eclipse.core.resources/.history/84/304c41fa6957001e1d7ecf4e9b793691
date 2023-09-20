@@ -1,0 +1,50 @@
+package com.spring.basic.score.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.spring.basic.score.dto.ScoreListResponseDTO;
+import com.spring.basic.score.dto.ScoreRequestDTO;
+import com.spring.basic.score.entity.Score;
+import com.spring.basic.score.repository.IScoreRepository;
+
+import lombok.RequiredArgsConstructor;
+
+//컨트롤러와 레파지토리 사이에 배치되어 기타 비즈니스 로직을 처리
+//ex) 값을 가공, 예외 처리, dto로 변환 , 트랜잭션 등등..
+@Service // 메서드를 사용하려면 객체를 만들어야하는데 ScoreService sv = new ScoreService 뭐 이래야하는데
+		 // 그럴거없이 스프링에선 @Service로 객체를 만들었다 칠수 있음
+@RequiredArgsConstructor
+public class ScoreService {
+	
+	private final IScoreRepository scoreRepository;
+	
+	//등록 중간처리
+	//controller가 service.insertScore(dto);	로 dto를 넘김
+	//하지만 온전한 학생의 정보를 가지는 객체는 score임.
+	//내가 entity를 만들어서 넘겨야겠다.
+	public void insertScore(ScoreRequestDTO dto) {
+		Score score = new Score(dto); //entity 완성, 레파지토리에게 전송해서 DB에 넣기.
+		scoreRepository.save(score);
+		
+	}
+
+	/*
+	 * 컨트롤러가 DB를 통해
+	 * 성적 정보 리스트를 가져오기를 요구함
+	 * 근데 레파지토리는 학생정보가 모두 포함된 리스트를 줌
+	 * 현재 요청에 어울리는 응답 화면에 맞는 DTO로 변경해서 주자
+	 */
+	
+	public List<ScoreListResponseDTO> getList() {
+		List<ScoreListResponseDTO> dtoList = new ArrayList<>();
+		List<Score> scoreList =  scoreRepository.findAll();
+		for(Score s: scoreList) {
+			ScoreListResponseDTO dto = new ScoreListResponseDTO(s); // entity를 dto로 변환
+			dtoList.add(dto); // 변환 dto를 dto List에 추가
+		}
+		return dtoList;
+	}
+}

@@ -1,5 +1,6 @@
 package com.spring.basic.score.entity;
 
+
 import com.spring.basic.score.dto.ScoreRequestDTO;
 
 import lombok.AllArgsConstructor;
@@ -41,6 +42,7 @@ public class Score {
 		changeScore(dto);
 	}
 	
+
 	public void changeScore(ScoreRequestDTO dto) {
         this.kor = dto.getKor();
         this.eng = dto.getEng();
