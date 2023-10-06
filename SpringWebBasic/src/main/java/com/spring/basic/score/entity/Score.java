@@ -27,12 +27,9 @@ import lombok.ToString;
 @AllArgsConstructor
 public class Score {
 	
+	private int stuNum; //학번
 	private String stuName; // 학생의 이름
 	private int kor,eng,math; // 국,영,수 점수
-	
-	// 여기까진 DTO도 갖고 있었음
-	
-	private int stuNum; //학번
 	private int total; //총점
 	private double average; //평균
 	private Grade grade; //학점 Grade(enum)을 만들어줘서 거기에 있는 값만 리턴받을수 있게함

@@ -53,7 +53,7 @@
                         <option value="macchiato">카라멜 마끼아또</option>                        
                     </select>
                 </label>
-                <label class="price"># 가격: <span class="price-value">3000</span>원</label>
+                <label class="price"># 가격: <span class="price-value">?</span>원</label>
                 
 
                 <!-- 화면에 렌더링은 안되지만 서버로 보낼 수 있음 -->

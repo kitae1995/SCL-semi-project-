@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 구현하고자 하는 인터페이스의 풀 경로를 작성 -->
+<mapper namespace="com.spring.basic.score.repository.IScoreMapper">
+
+	<!-- 데이터베이스 컬럼명과 Entity 객체의 필드명을 통일시켜주는 메서드임 ( 마이바티스는 이름이 다르면 대입이 안됨 )
+	여기선 stuName인데 sqlDeveloper가서 보면 stu_name이라 이름이 다를경우에 필요함 -->
+	<resultMap type="com.spring.basic.score.entity.Score" id="scoreMap">
+		<!-- 테이블에서 primary KEY로 등록한 값만 id로 등록해주고 나머진 result로 등록해줌 -->
+		<id property="stuNum" column="stu_num"/> <!-- stunum은 primarykey니까 id로 태그붙임 -->
+		<result property="stuName" column="stu_name"/> 	<!-- property에는 자바 이름 , column은 sql 컬럼 이름 -->
+	</resultMap>
+
+	<!-- 점수 등록 기능 -->
+	<insert id="save"> <!-- 아이디에다가는 구현할 메서드의 이름(인터페이스에 있음) -->
+		INSERT INTO score
+		VALUES(score_seq.NEXTVAL,#{stuName},#{kor},#{eng},#{math}
+		,#{total},#{average},#{grade}) <!-- 마이바티스에선 ? 대신 #{} -->
+	</insert>
+	
+	
+	<!-- 점수 전체 조회 기능 -->
+	<!-- findAll의 리턴타입은 List<score> 임
+		List는 직접 언급할 필요는 없음 ( 데이터가 여러개면 알아서 List로 포장해줌 )
+		Score 객체는 Score 테이블의 컬럼명과 필드명이 완벽히 일치하지 않기 때문에
+		이름을 통일시켜주는 resultMap 메서드를 참조할 수 있도록 id 옆에 넣어줌 
+	-->
+	<select id="findAll" resultMap="scoreMap"> <!--  위에 만들어놓은 scoreMap을 가져옴 -->
+		SELECT * FROM score
+	</select>
+	
+	<!-- 점수 삭제 기능 -->
+	<delete id ="deleteByStuNum">
+		DELETE FROM score WHERE stu_num = #{stuNum}
+	</delete>
+	
+	<!-- 점수 상세 정보 -->
+	<select id="findByStuNum" resultMap="scoreMap">
+		SELECT * FROM score
+		WHERE stu_num = #{stuNum}
+	</select>	
+	
+	<!-- 점수 수정 -->
+	<update id="modify">
+		UPDATE score
+		SET kor=#{kor},eng=#{eng},math=#{math},total=#{total},average=#{average},grade=#{grade}
+		WHERE stu_num=#{stuNum}
+	</update>
+	
+</mapper>
+
+<!-- root-context에 가서 원조 인터페이스(여기선 iscorerepository의 주소를 써 붙여줘야함 
+예시 : <mybatis-spring:scan base-package="com.spring.basic.score.repository"/>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
