@@ -39,6 +39,7 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="ds"/>
 		<!-- 인터페이스의 구현체가 될 xml 파일의 위치를 지목하는 setter 메서드 -->
+		<property name="configLocation" value="classpath:/mybatis-config.xml"/>
 		<property name="mapperLocations" value="classpath:/mappers/*Mapper.xml"/> 
 		<!-- classpath의 뜻 - > src/main/resources 경로를 뜻함 -->
 	</bean>
@@ -53,6 +54,7 @@
      -->
 	<mybatis-spring:scan base-package="com.spring.basic.score.repository"/>
 	<mybatis-spring:scan base-package="com.spring.basic.board.repository"/>
+<!-- <mybatis-spring:scan base-package="com.spring.basic.Page.repository"/> -->
 	
 	
 	

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.basic.board.repository.IPageMapper">
+
+<insert id="insertPage"> <!-- 게시글 등록 -->
+INSERT INTO jdbc_page
+VALUES(page_seq.NEXTVAL,#{writer},#{title},#{grade},#{content},sysdate)
+</insert>
+
+<select id="getcontents" resultType="Page">
+SELECT * FROM jdbc_page
+</select>
