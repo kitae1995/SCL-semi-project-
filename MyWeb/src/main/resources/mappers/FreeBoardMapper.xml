@@ -13,7 +13,12 @@
 	<select id="getList" resultType="freeboard">
 	 <!--  mybaits-config에서 com.spring.myweb.freeboard.entity.FreeBoard을 freeboard로 줄인거임 -->
 		SELECT * FROM freeboard
-		
+		ORDER BY bno DESC
+	</select>
+	
+	<select id="getTotal" resultType="int">
+		SELECT COUNT(*)
+		FROM freeboard
 	</select>
 	
 	<select id="getContent" resultType="freeboard">
@@ -24,7 +29,7 @@
 	<update id="update">
 		UPDATE freeboard
 		SET title=#{title},content=#{content}
-		WHERE bno = 1
+		WHERE bno = #{bno}
 	
 	</update>
 	

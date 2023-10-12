@@ -15,18 +15,22 @@
 		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_SIZE" value="true"/>
 		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_LOCATION" value="false"/>
 		<list key="orderedElements">
+			<item value="/MyWeb/src/main/resources/mappers/FreeBoardMapper.xml"/>
 			<item value="/MyWeb/src/main/resources/properties/Hikari.properties"/>
 			<item value="/SpringWebBasic/src/main/webapp/WEB-INF/views/score/score-detail.jsp"/>
 		</list>
 		<list key="orderedProviders">
 			<item value="org.eclipse.ui.ide/org.eclipse.ui.internal.ide.dialogs.OpenResourceQuickAccessComputer"/>
 			<item value="org.eclipse.ui.ide/org.eclipse.ui.internal.ide.dialogs.OpenResourceQuickAccessComputer"/>
+			<item value="org.eclipse.ui.ide/org.eclipse.ui.internal.ide.dialogs.OpenResourceQuickAccessComputer"/>
 		</list>
 		<list key="textEntries">
 			<item value="1"/>
 			<item value="1"/>
+			<item value="1"/>
 		</list>
 		<list key="textArray">
+			<item value="freeboardma"/>
 			<item value="hikari"/>
 			<item value="score-"/>
 		</list>

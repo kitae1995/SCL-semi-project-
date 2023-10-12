@@ -171,3 +171,45 @@
 10월 11, 2023 17:49:11.226 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
 10월 11, 2023 17:49:40.829 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
 10월 11, 2023 17:50:11.459 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+10월 12, 2023 12:03:48.355 NEW SESSION
+10월 12, 2023 12:03:48.355 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 12:08:31.199 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 12:53:23.656 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 12:54:27.916 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 12:56:48.40 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 12:57:41.169 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 12:59:01.250 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 13:00:19.307 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 13:12:47.336 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 13:17:03.26 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 13:28:02.278 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 13:59:23.761 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 14:00:59.876 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 14:03:20.47 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+10월 12, 2023 14:10:57.772 NEW SESSION
+10월 12, 2023 14:10:57.772 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 14:24:43.879 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 14:33:01.481 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 14:35:39.592 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 14:37:02.908 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 14:44:24.968 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 14:46:40.591 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 15:47:26.922 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 15:49:29.99 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 15:53:55.407 [5456:12264:1012/155355.407:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 173 in 1-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)
+10월 12, 2023 15:56:43.286 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 15:58:30.199 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 16:00:36.462 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 16:24:56.169 [11576:2392:1012/162456.168:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 173 in 1-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)
+10월 12, 2023 16:24:59.929 [11576:2392:1012/162459.929:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 173 in 1-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)
+10월 12, 2023 16:25:14.62 [11576:2392:1012/162514.062:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 173 in 1-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)
+10월 12, 2023 16:25:17.546 [11576:2392:1012/162517.545:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 173 in 1-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)
+10월 12, 2023 16:25:38.333 [11576:2392:1012/162538.333:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 173 in 1-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)
+10월 12, 2023 18:56:34.101 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 12, 2023 18:57:27.07 [5044:2756:1012/185727.006:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 173 in 1-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)
+10월 12, 2023 18:57:35.707 [5044:2756:1012/185735.707:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 173 in 1-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)
+
+10월 12, 2023 19:04:30.709 NEW SESSION
+10월 12, 2023 19:04:30.709 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.

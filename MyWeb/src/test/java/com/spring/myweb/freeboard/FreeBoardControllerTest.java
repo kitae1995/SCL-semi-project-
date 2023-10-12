@@ -17,6 +17,7 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.spring.myweb.freeboard.controller.FreeBoardController;
+import com.spring.myweb.freeboard.dto.FreeDetailResponseDTO;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/spring/root-context.xml"
@@ -78,13 +79,47 @@ public class FreeBoardControllerTest {
 	@Test
 	@DisplayName("3번 글 상세보기 요청을 넣으면 컨트롤러는 DB에서 가지고 온 글 객체를 model에 담아서"
 			+ "freeDetail.jsp로 이동시킬 것이다.")
-	void testContent() {
+	void testContent() throws Exception {
 		// /freeboard/content -> GET
 		// bno,title,writer,content, updateDate	== null ? regdate,updateDate(수정됨)
-		String 
 		
+		ModelAndView mv = mockmvc.perform(
+				MockMvcRequestBuilders.get("/freeboard/content")
+									  .param("bno", "3")
+				).andReturn().getModelAndView();
 		
+		assertEquals("freeboard/freeDetail", mv.getViewName());
+		FreeDetailResponseDTO dto = (FreeDetailResponseDTO) mv.getModelMap().get("article");
+		System.out.println(dto);
+		assertEquals(dto.getBno(), 3);
 	}
+	
+	@Test
+    @DisplayName("3번글의 제목과 내용을 수정하는 요청을 post방식으로 전송하면 수정이 진행되고, "
+            + "수정된 글의 상세보기 페이지로 응답해야 한다.")
+    // /freeboard/modify -> post
+    void testModify() throws Exception {
+	   String bno = "3";
+       String viewname = mockmvc.perform(MockMvcRequestBuilders.post("/freeboard/modify")
+        									  .param("title", "제목수정")
+        									  .param("content", "내용수정")
+        									  .param("bno", bno)
+        			    ).andReturn().getModelAndView().getViewName();
+        
+        assertEquals(viewname,"redirect:/freeboard/content?bno=" + bno);
+        
+    }
+    
+    @Test
+    @DisplayName("3번 글을 삭제하면 목록 재요청이 발생할 것이다.")
+    // /freeboard/delete -> post
+    void testDelete() throws Exception {
+        assertEquals("redirect:/freeboard/freeList", 
+        				mockmvc.perform(MockMvcRequestBuilders.post("/freeboard/delete")
+        													  .param("bno","3")
+        						).andReturn().getModelAndView().getViewName()
+        				);
+    }
 	
 	
 }
