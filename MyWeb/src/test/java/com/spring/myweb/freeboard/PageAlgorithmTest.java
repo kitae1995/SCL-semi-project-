@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import com.spring.myweb.freeboard.dto.page.Page;
 import com.spring.myweb.freeboard.mapper.IFreeBoardMapper;
 
 @ExtendWith(SpringExtension.class)
@@ -19,12 +20,15 @@ public class PageAlgorithmTest {
 	@Test
 	@DisplayName("페이지 버튼 알고리즘 테스트")
 	void pageTest() {
-		int page = 2; // 사용자가 요청한 페이지 번호
-		int cpp = 7; // 한 화면에 보여줄 게시물 개수
-		int btnNum = 10; // 한 화면에 보여줄 버튼 개수
+		int page = 16; // 사용자가 요청한 페이지 번호
+		int cpp = 20; // 한 화면에 보여줄 게시물 개수
+		int btnNum = 5; // 한 화면에 보여줄 버튼 개수
 		
-		int articleTotalCount = mapper.getTotal();
-		System.out.println("총 게시물 수 : " + articleTotalCount);
+		int articleTotalCount = mapper.getTotal(Page.builder()
+				.pageNo(16)
+				.amount(20)
+				.build());
+		System.out.println("총 게시물 수: " + articleTotalCount);
 		
 		//끝 페이지 번호 구하기
 		int endPage = (int) (Math.ceil(page / (double) btnNum) * btnNum);
@@ -32,9 +36,8 @@ public class PageAlgorithmTest {
 		
 		//시작 페이지 번호 구하기
 		int beginPage = endPage - btnNum + 1;
-		System.out.println("시작 페이지 번호 : " + beginPage);
+		System.out.println("시작 페이지 번호: " + beginPage);
 		
-		//이전 , 다음 버튼
 		boolean prev = (beginPage == 1) ? false : true;
 		boolean next = (articleTotalCount <= (endPage * cpp)) ? false : true;
 		
@@ -42,9 +45,28 @@ public class PageAlgorithmTest {
 		System.out.println("다음 버튼 활성화: " + next);
 		
 		if(!next) {
-			endPage = (int) Math.ceil(articleTotalCount / (double)cpp);
+			endPage = (int) Math.ceil(articleTotalCount / (double) cpp); 
 		}
+		
 		System.out.println("보정 후 끝 페이지 번호: " + endPage);
 		
+		
 	}
+	
+	
+	
+	
+
 }
+
+
+
+
+
+
+
+
+
+
+
+

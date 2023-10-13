@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+
 	<%@ include file="../include/header.jsp" %>
 
     <section>
@@ -23,10 +23,10 @@
                                     <td><input class="form-control input-sm" name="title"></td>
                                 </tr>
                                 <tr>
-                                    <td class="t-title">COMMNET</td>
+                                    <td class="t-title">COMMENT</td>
                                     <td>
                                     <textarea class="form-control" rows="7" name="content"></textarea>
-                                    </td>                 
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -41,6 +41,7 @@
        </div>
     </section>
     
- 	<%@ include file="../include/footer.jsp" %>
-  
+    <%@ include file="../include/footer.jsp" %>
     
+    
+  
