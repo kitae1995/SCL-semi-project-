@@ -25,3 +25,5 @@
 		<typeAlias type="com.spring.myweb.user.entity.User" alias="User"/>
 	</typeAliases>
 </configuration>
+
+<!-- 10월 17일 확인용 -->
