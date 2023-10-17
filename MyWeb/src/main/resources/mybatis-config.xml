@@ -5,6 +5,13 @@
 <configuration>
 	
 	<settings>
+		<!-- 
+			MyBatis에서는 쿼리에 매핑되는 파라미터에 null이 들어가면 에러가남
+			(sql에서 NOT NULL이 아니라 null값이 들어가도 되는데 오류가 난다는 거임)
+			위와같은 jdbcTypeForNull을 넣어주면 정상적으로 작동됨
+		 -->
+		<setting name="jdbcTypeForNull" value="NULL"/>
+		
 		<!-- 언더스코어 표기법을 카멜 케이스로 자동 변환하는 설정을 true로 지정  -->
 		<setting name="mapUnderscoreToCamelCase" value="true"/>
 	
@@ -15,5 +22,6 @@
 	com.spring.myweb.freeboard.entity.FreeBoard 이걸 이제 freeboard로만 써도 된다는 뜻임 -->
 	<typeAliases>
 		<typeAlias type="com.spring.myweb.freeboard.entity.FreeBoard" alias="freeboard"/>
+		<typeAlias type="com.spring.myweb.user.entity.User" alias="User"/>
 	</typeAliases>
 </configuration>

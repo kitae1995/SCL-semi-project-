@@ -183,6 +183,32 @@
             <artifactId>mybatis-spring</artifactId>
             <version>2.0.6</version>
         </dependency>
+        
+        <!-- jackson-databind :데이터를 JSON 형태로 파싱해주는 라이브러리
+        또한 JSON 데이터를 java 객체로도 표현해 주는 라이브러리.-->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.14.2</version>
+</dependency>
+
+<!-- javax.mail/mail : 자바에서 메일을 보내기위해 필요한 라이브러리-->
+<dependency>
+    <groupId>javax.mail</groupId>
+    <artifactId>mail</artifactId>
+    <version>1.4.7</version>
+</dependency>
+
+<!-- spring-context-support 메일 뿐만 아니라 캐시메모리 , 스케줄링
+,ui와 관련된 다양한 부가기능을 지원하는 라이브러리 -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context-support</artifactId>
+    <version>${org.springframework-version}</version>
+</dependency>
+
+
+        
           
 	</dependencies>
 	<!-- 의존성 라이브러리 선언 끝 -->
