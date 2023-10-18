@@ -1,12 +1,15 @@
 package com.spring.myweb.freeboard.dto.response;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import com.spring.myweb.freeboard.entity.FreeBoard;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.Setter;
 import lombok.ToString;
-@Getter @Setter @ToString @EqualsAndHashCode
+
+@Getter @ToString @EqualsAndHashCode
 public class FreeDetailResponseDTO {
 	
 	private int bno;
@@ -20,11 +23,27 @@ public class FreeDetailResponseDTO {
 		this.title = board.getTitle();
 		this.writer = board.getWriter();
 		this.content = board.getContent();
-		
 		if(board.getUpdateDate() == null) {
 			this.date = FreeListResponseDTO.makePrettierDateString(board.getRegDate());
-		}else {
-			this.date = FreeListResponseDTO.makePrettierDateString(board.getUpdateDate()) + "(수정됨)";
+		} else {
+			this.date 
+			= FreeListResponseDTO.makePrettierDateString(board.getUpdateDate()) + " (수정됨)";
 		}
 	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

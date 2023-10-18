@@ -4,4 +4,38 @@
 		<item key="DIALOG_X_ORIGIN" value="724"/>
 		<item key="DIALOG_Y_ORIGIN" value="392"/>
 	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="image"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="image"/>
+			<item value="내글"/>
+			<item value="myweb"/>
+			<item value="ok"/>
+			<item value="joinform"/>
+			<item value="사용자클래스"/>
+			<item value="회원가입을"/>
+			<item value="이메일"/>
+			<item value="필수"/>
+			<item value="필수입니"/>
+			<item value="필수입니다"/>
+			<item value="사용 가능한"/>
+			<item value="비밀번호 형식"/>
+			<item value="폼 데이터 검증"/>
+			<item value="데이터"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="389"/>
+		<item key="DIALOG_Y_ORIGIN" value="300"/>
+		<item key="DIALOG_WIDTH" value="288"/>
+		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
 </section>

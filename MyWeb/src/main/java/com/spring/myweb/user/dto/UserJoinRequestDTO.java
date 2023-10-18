@@ -8,10 +8,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Setter @Getter 
-@Builder
+@Getter @Setter 
 @ToString @EqualsAndHashCode
-@NoArgsConstructor @AllArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class UserJoinRequestDTO {
 	
 	private String userId;
@@ -24,4 +25,5 @@ public class UserJoinRequestDTO {
 	private String addrBasic;
 	private String addrDetail;
 	private String addrZipNum;
+
 }
