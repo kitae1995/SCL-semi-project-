@@ -3,6 +3,7 @@ package com.spring.myweb.reply.dto;
 import com.spring.myweb.reply.entity.Reply;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,34 +14,18 @@ import lombok.ToString;
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
-public class ReplyRegistDTO {
+@Builder
+public class ReplydeleteRequestDTO {
 	
-	private int bno;
-	private String replyText;
-	private String replyId;
+	private int replyNo;
 	private String replyPw;
+	private String replyText;
 	
-	public Reply toEntity(ReplyRegistDTO dto) {
+	public Reply toEntity(ReplydeleteRequestDTO dto) {
 		return Reply.builder()
-				.bno(dto.getBno())
-				.replyText(dto.getReplyText())
-				.replyWriter(getReplyId())
-				.replyPw(dto.getReplyPw())
-				.build();
+		.replyNo(this.replyNo)
+		.replyPw(this.replyPw)
+		.replyText(this.replyText)
+		.build();
 	}
-	
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
