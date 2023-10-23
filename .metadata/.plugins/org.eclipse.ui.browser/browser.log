@@ -232,3 +232,15 @@
 
 10월 18, 2023 10:54:12.493 NEW SESSION
 10월 18, 2023 10:54:12.493 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+10월 23, 2023 11:07:23.432 NEW SESSION
+10월 23, 2023 11:07:23.433 [13184:2124:1023/110723.429:ERROR:cert_issuer_source_aia.cc(36)] Error parsing cert retrieved from AIA (as DER):
+10월 23, 2023 11:07:23.434 ERROR: Couldn't read tbsCertificate as SEQUENCE
+10월 23, 2023 11:07:23.434 ERROR: Failed parsing Certificate
+10월 23, 2023 11:07:23.435 
+10월 23, 2023 11:07:23.449 [13184:2124:1023/110723.448:ERROR:cert_verify_proc_builtin.cc(701)] CertVerifyProcBuiltin for lelecoder.com failed:
+10월 23, 2023 11:07:23.449 ----- Certificate i=0 (CN=lelecoder.com) -----
+10월 23, 2023 11:07:23.450 ERROR: Time is after notAfter
+10월 23, 2023 11:07:23.450 
+10월 23, 2023 11:07:23.451 
+10월 23, 2023 13:09:49.07 [2620:10572:1023/130949.007:ERROR:get_updates_processor.cc(261)] PostClientToServerMessage() failed during GetUpdates with error 2
