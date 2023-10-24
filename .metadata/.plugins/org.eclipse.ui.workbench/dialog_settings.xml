@@ -12,6 +12,9 @@
 		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_SIZE" value="true"/>
 		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_LOCATION" value="false"/>
 		<list key="orderedElements">
+			<item value="/MyWeb/src/main/webapp/WEB-INF/views/snsboard/snsList.jsp"/>
+			<item value="/MyWeb/src/main/java/com/spring/myweb/HomeController.java"/>
+			<item value="/MyWeb/src/main/resources/mappers/SnsBoardMapper.xml"/>
 			<item value="/MyWeb/src/main/resources/mybatis-config.xml"/>
 			<item value="/Servers/Tomcat v9.0 Server at localhost-config/context.xml"/>
 			<item value="/MyWeb/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml"/>
@@ -26,8 +29,14 @@
 			<item value="org.eclipse.ui.ide/org.eclipse.ui.internal.ide.dialogs.OpenResourceQuickAccessComputer"/>
 			<item value="org.eclipse.ui.ide/org.eclipse.ui.internal.ide.dialogs.OpenResourceQuickAccessComputer"/>
 			<item value="org.eclipse.ui.ide/org.eclipse.ui.internal.ide.dialogs.OpenResourceQuickAccessComputer"/>
+			<item value="org.eclipse.ui.ide/org.eclipse.ui.internal.ide.dialogs.OpenResourceQuickAccessComputer"/>
+			<item value="org.eclipse.ui.ide/org.eclipse.ui.internal.ide.dialogs.OpenResourceQuickAccessComputer"/>
+			<item value="org.eclipse.ui.ide/org.eclipse.ui.internal.ide.dialogs.OpenResourceQuickAccessComputer"/>
 		</list>
 		<list key="textEntries">
+			<item value="1"/>
+			<item value="1"/>
+			<item value="1"/>
 			<item value="2"/>
 			<item value="1"/>
 			<item value="1"/>
@@ -36,6 +45,9 @@
 			<item value="1"/>
 		</list>
 		<list key="textArray">
+			<item value="snsl"/>
+			<item value="homec"/>
+			<item value="sns"/>
 			<item value="mybat"/>
 			<item value="my"/>
 			<item value="context"/>

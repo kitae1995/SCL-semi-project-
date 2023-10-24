@@ -6,12 +6,12 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
 import com.spring.myweb.freeboard.dto.page.Page;
-import com.spring.myweb.snsboard.dto.SnsBoardContentDTO;
 import com.spring.myweb.snsboard.dto.SnsBoardRequestDTO;
 import com.spring.myweb.snsboard.dto.SnsBoardResponseDTO;
 import com.spring.myweb.snsboard.entity.SnsBoard;
@@ -87,16 +87,26 @@ public class SnsBoardService {
 		
 		return dtoList;
 	}
-	
-	
-	public SnsBoardContentDTO getDetail(int bno) {
-		
-		SnsBoard board = mapper.getDetail(bno);
-		return new SnsBoardContentDTO(board);
+
+	public SnsBoardResponseDTO getContent(int bno) {	
+		return new SnsBoardResponseDTO(mapper.getDetail(bno));
 	}
-	
-	
-	
+
+	public void delete(int bno) {
+		mapper.delete(bno);
+	}
+
+	public String searchLike(Map<String, String> params) {
+		if(mapper.searchLike(params) == 0) {
+			mapper.createLike(params);
+			return "like";
+		} else {
+			mapper.deleteLike(params);
+			return "delete";
+		}
+		
+	}
+
 }
 
 

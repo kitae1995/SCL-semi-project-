@@ -5,28 +5,28 @@
 		<item key="DIALOG_Y_ORIGIN" value="392"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="모달"/>
+		<item key="selection" value="hand"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="모달"/>
-			<item value="등록하기"/>
-			<item value="replyModal"/>
-			<item value="replaymodal"/>
-			<item value="replaymo"/>
-			<item value="replay"/>
-			<item value="#replyModal"/>
-			<item value="Page"/>
-			<item value="page"/>
-			<item value="fomr"/>
-			<item value="modalModBtn"/>
+			<item value="hand"/>
+			<item value="handSc"/>
+			<item value="handS"/>
+			<item value="hands"/>
+			<item value="list.len"/>
+			<item value="isFi"/>
 			<item value="getList"/>
-			<item value="first"/>
-			<item value="Fir"/>
-			<item value="firs"/>
+			<item value="List"/>
+			<item value="thro"/>
+			<item value="글 목록 함수"/>
+			<item value="delBtn"/>
+			<item value="DELETE"/>
+			<item value="session"/>
+			<item value="${pageContext.request.contextPath}/snsboard/display/"/>
+			<item value="${pageContext.request.contextPath}/snsboard/display/&apos; + data.fileLoc"/>
 		</list>
 		<list key="replacehistory">
 		</list>

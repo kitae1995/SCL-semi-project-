@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.spring.myweb.freeboard.dto.response.FreeListResponseDTO"/>
-    <fullyQualifiedTypeName name="com.spring.myweb.user.dto.UserInfoResponseDTO"/>
-    <fullyQualifiedTypeName name="org.springframework.web.servlet.HandlerInterceptor"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
     <fullyQualifiedTypeName name="com.spring.myweb.reply.service.IReplyService"/>
     <fullyQualifiedTypeName name="com.spring.myweb.reply.dto.ReplyRegistDto"/>
@@ -47,7 +43,6 @@
     <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="com.spring.myweb.snsboard.dto.SnsBoardResponseDTO"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.nio.file.Files"/>
     <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
@@ -57,7 +52,12 @@
     <fullyQualifiedTypeName name="org.springframework.util.FileCopyUtils"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="com.spring.myweb.snsboard.entity.SnsBoard"/>
     <fullyQualifiedTypeName name="com.spring.myweb.snsboard.dto.SnsBoardContentDTO"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="com.spring.myweb.snsboard.dto.SnsBoardRequestDTO"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="com.spring.myweb.snsboard.dto.SnsBoardResponseDTO"/>
+    <fullyQualifiedTypeName name="lombok.extern.slf4j.Slf4j"/>
 </qualifiedTypeNameHistroy>
