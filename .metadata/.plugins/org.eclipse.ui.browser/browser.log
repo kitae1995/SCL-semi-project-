@@ -244,3 +244,9 @@
 10월 23, 2023 11:07:23.450 
 10월 23, 2023 11:07:23.451 
 10월 23, 2023 13:09:49.07 [2620:10572:1023/130949.007:ERROR:get_updates_processor.cc(261)] PostClientToServerMessage() failed during GetUpdates with error 2
+
+10월 25, 2023 10:54:20.25 NEW SESSION
+10월 25, 2023 10:54:20.25 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 25, 2023 12:13:31.738 [8064:5904:1025/121331.738:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost
+10월 25, 2023 16:39:31.136 [7852:11196:1025/163931.136:ERROR:device_event_log_impl.cc(225)] [16:39:31.136] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+10월 25, 2023 17:16:43.188 [7852:10544:1025/171643.187:ERROR:connection_factory_impl.cc(471)] ConnectionHandler failed with net error: -2

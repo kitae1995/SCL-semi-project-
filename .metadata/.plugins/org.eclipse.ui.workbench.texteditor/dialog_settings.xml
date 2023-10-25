@@ -5,13 +5,21 @@
 		<item key="DIALOG_Y_ORIGIN" value="392"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="hand"/>
+		<item key="selection" value="pare"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="pare"/>
+			<item value="글 번호 얻기"/>
+			<item value="글 번호"/>
+			<item value="bno"/>
+			<item value="20"/>
+			<item value="hei"/>
+			<item value="브라우저"/>
+			<item value="좋아요"/>
 			<item value="hand"/>
 			<item value="handSc"/>
 			<item value="handS"/>
@@ -19,14 +27,6 @@
 			<item value="list.len"/>
 			<item value="isFi"/>
 			<item value="getList"/>
-			<item value="List"/>
-			<item value="thro"/>
-			<item value="글 목록 함수"/>
-			<item value="delBtn"/>
-			<item value="DELETE"/>
-			<item value="session"/>
-			<item value="${pageContext.request.contextPath}/snsboard/display/"/>
-			<item value="${pageContext.request.contextPath}/snsboard/display/&apos; + data.fileLoc"/>
 		</list>
 		<list key="replacehistory">
 		</list>

@@ -12,6 +12,7 @@
 		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_SIZE" value="true"/>
 		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_LOCATION" value="false"/>
 		<list key="orderedElements">
+			<item value="org.eclipse.ui.console.ConsoleView"/>
 			<item value="/MyWeb/src/main/webapp/WEB-INF/views/snsboard/snsList.jsp"/>
 			<item value="/MyWeb/src/main/java/com/spring/myweb/HomeController.java"/>
 			<item value="/MyWeb/src/main/resources/mappers/SnsBoardMapper.xml"/>
@@ -23,6 +24,7 @@
 			<item value="/SpringWebBasic/src/main/webapp/WEB-INF/views/score/score-detail.jsp"/>
 		</list>
 		<list key="orderedProviders">
+			<item value="org.eclipse.e4.ui.parts"/>
 			<item value="org.eclipse.ui.ide/org.eclipse.ui.internal.ide.dialogs.OpenResourceQuickAccessComputer"/>
 			<item value="org.eclipse.ui.ide/org.eclipse.ui.internal.ide.dialogs.OpenResourceQuickAccessComputer"/>
 			<item value="org.eclipse.ui.ide/org.eclipse.ui.internal.ide.dialogs.OpenResourceQuickAccessComputer"/>
@@ -37,6 +39,7 @@
 			<item value="1"/>
 			<item value="1"/>
 			<item value="1"/>
+			<item value="1"/>
 			<item value="2"/>
 			<item value="1"/>
 			<item value="1"/>
@@ -45,6 +48,7 @@
 			<item value="1"/>
 		</list>
 		<list key="textArray">
+			<item value="console"/>
 			<item value="snsl"/>
 			<item value="homec"/>
 			<item value="sns"/>
