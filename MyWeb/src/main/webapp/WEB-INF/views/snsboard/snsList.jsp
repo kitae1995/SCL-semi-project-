@@ -496,7 +496,11 @@
 
 		} // end getList()
 
-
+		// 글 번호 얻기        
+		       
+		
+		
+		
 		$contentDiv.addEventListener('click', e => {
 			e.preventDefault(); //a 태그의 고유 기능 막기.
 
@@ -517,7 +521,7 @@
 				return;
 			}
 			
-
+			
 			//삭제 처리
 			if (e.target.matches('.link-inner #delBtn')) {
 				//비동기 방식으로 삭제를 진행해 주세요. 
@@ -551,7 +555,9 @@
 
 				return;
 			}
-
+			
+			const bno = e.target.dataset.bno; //href에도 번호가 다 묻어있다    
+			
 			//fetch함수를 사용하여 글 상세 보기 요청을 비동기 식으로 요청하세요.
 			// url: /snsboard/content/글번호 -> GET
 			//전달 받은 글 내용을 미리 준비한 모달창에 뿌릴 겁니다.(모달 위에 있어요.)
