@@ -5,28 +5,28 @@
 		<item key="DIALOG_Y_ORIGIN" value="392"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="ps"/>
+		<item key="selection" value="logo"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="ps"/>
-			<item value="categorySearch"/>
-			<item value="category"/>
-			<item value="id"/>
-			<item value="cate"/>
-			<item value="OL7"/>
-			<item value="search"/>
-			<item value="searcch"/>
-			<item value="addCategoryClickEvent"/>
-			<item value="code"/>
-			<item value="group"/>
-			<item value="groupcode"/>
-			<item value="img"/>
-			<item value="api"/>
-			<item value="주소찾기"/>
+			<item value="LOGO"/>
+			<item value="&lt;script&gt;"/>
+			<item value="show"/>
+			<item value="hi"/>
+			<item value="hi\"/>
+			<item value="hide"/>
+			<item value="map"/>
+			<item value="Latlng"/>
+			<item value="Latㅣng"/>
+			<item value="app"/>
+			<item value="JangMenu"/>
+			<item value="latlng"/>
+			<item value="jangpositions."/>
+			<item value="jangpositions.l"/>
+			<item value="jangp"/>
 		</list>
 		<list key="replacehistory">
 		</list>

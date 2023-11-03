@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Object"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="com.spring.myweb.reply.dto.ReplyListResponseDTO"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="com.spring.myweb.reply.dto.ReplyRequestDTO"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
     <fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
+    <fullyQualifiedTypeName name="com.spring.myweb.sclboard.service.ISclBoardService"/>
+    <fullyQualifiedTypeName name="com.spring.myweb.sclboard.dto.request.SclRegistRequestDTO"/>
 </qualifiedTypeNameHistroy>

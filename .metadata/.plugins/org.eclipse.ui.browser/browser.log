@@ -257,3 +257,36 @@
 10월 29, 2023 16:53:37.724 [9028:15276:1029/165337.721:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
 10월 29, 2023 17:02:27.963 [8368:14804:1029/170227.962:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
 10월 29, 2023 17:02:27.963 [8368:14804:1029/170227.962:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+11월 01, 2023 18:53:05.975 NEW SESSION
+11월 01, 2023 18:53:05.975 [10592:11144:1101/185305.965:ERROR:cert_verify_proc_builtin.cc(701)] CertVerifyProcBuiltin for fineeun.com failed:
+11월 01, 2023 18:53:05.976 ----- Certificate i=0 (O=My Company Ltd,L=Newbury,ST=Berkshire,C=GB) -----
+11월 01, 2023 18:53:05.976 ERROR: No matching issuer found
+11월 01, 2023 18:53:05.976 
+11월 01, 2023 18:53:05.976 
+11월 01, 2023 19:06:05.54 [1101/190605.051:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\bccfdff1-306c-41c2-a69f-3305a4e312b2: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.54 [1101/190605.054:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\19f8e928-b2ac-458b-92e3-f315b64e23b2: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.55 [1101/190605.054:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\78146a17-abf5-4197-8060-6d7e86789b60: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.55 [1101/190605.054:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\56ffad5f-b9ed-4aa7-8811-6e5e76283aca: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.55 [1101/190605.055:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\bccfdff1-306c-41c2-a69f-3305a4e312b2: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.55 [1101/190605.055:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\19f8e928-b2ac-458b-92e3-f315b64e23b2: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.55 [1101/190605.055:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\78146a17-abf5-4197-8060-6d7e86789b60: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.55 [1101/190605.055:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\56ffad5f-b9ed-4aa7-8811-6e5e76283aca: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.56 [1101/190605.056:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\bccfdff1-306c-41c2-a69f-3305a4e312b2: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.56 [1101/190605.056:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\19f8e928-b2ac-458b-92e3-f315b64e23b2: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.57 [1101/190605.056:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\78146a17-abf5-4197-8060-6d7e86789b60: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.57 [1101/190605.056:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\56ffad5f-b9ed-4aa7-8811-6e5e76283aca: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.57 [1101/190605.057:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\56ffad5f-b9ed-4aa7-8811-6e5e76283aca: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.57 [1101/190605.057:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\bccfdff1-306c-41c2-a69f-3305a4e312b2: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.62 [1101/190605.057:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\19f8e928-b2ac-458b-92e3-f315b64e23b2: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.62 [1101/190605.057:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\78146a17-abf5-4197-8060-6d7e86789b60: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.62 [1101/190605.061:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\78146a17-abf5-4197-8060-6d7e86789b60: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.62 [1101/190605.062:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\bccfdff1-306c-41c2-a69f-3305a4e312b2: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.62 [1101/190605.062:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\19f8e928-b2ac-458b-92e3-f315b64e23b2: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.62 [1101/190605.062:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\19f8e928-b2ac-458b-92e3-f315b64e23b2: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.64 [1101/190605.064:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\bccfdff1-306c-41c2-a69f-3305a4e312b2: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:05.64 [1101/190605.064:ERROR:filesystem_win.cc(130)] GetFileAttributes C:\Users\ICT04_06\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\bccfdff1-306c-41c2-a69f-3305a4e312b2: 지정된 파일을 찾을 수 없습니다. (0x2)
+11월 01, 2023 19:06:08.449 [10592:3064:1101/190608.448:ERROR:sharing_service.cc(250)] Device un-registration failed with fatal error
+
+11월 03, 2023 17:49:23.982 NEW SESSION
+11월 03, 2023 17:49:23.982 [8616:3568:1103/174923.970:ERROR:device_event_log_impl.cc(192)] [17:49:23.970] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
