@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.myweb.sclmain.mapper.ISnsBoardMapper">
+
+	<select id="selectLikePlace">
+	SELECT * FROM MapList
+	WHERE memberId = #{userId}
+	ORDER BY id DESC
+	LIMIT #{startIndex}, #{rowPerPage}
+	</select>
+	
+	<select id="countAll">
+	SELECT COUNT(*)
+	FROM MapList
+	WHERE memberId = #{userId}
+	</select>
+	
+	<select id="selectMapList">
+	SELECT COUNT(*) FROM MapList
+	WHERE memberId = #{userId}
+	AND address = #{address}
+	</select>
+	
+	<insert id="insertMapList">
+	INSERT INTO MapList (name,address,phone,url,memberId)
+	VALUES(#{name},#{address},#{phone},#{url},#{memberId})
+	</insert>
+	
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

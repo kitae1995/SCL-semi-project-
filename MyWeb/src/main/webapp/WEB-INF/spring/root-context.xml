@@ -55,6 +55,7 @@
 	<mybatis-spring:scan base-package="com.spring.myweb.snsboard.mapper"/>
 	<mybatis-spring:scan base-package="com.spring.myweb.sclboard.mapper"/>
 	<mybatis-spring:scan base-package="com.spring.myweb.scluser.mapper"/>
+	<mybatis-spring:scan base-package="com.spring.myweb.sclmain.mapper"/>
 	<mybatis-spring:scan base-package="com.spring.myweb.rest"/>
 		
 </beans>
