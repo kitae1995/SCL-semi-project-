@@ -290,3 +290,18 @@
 
 11월 03, 2023 17:49:23.982 NEW SESSION
 11월 03, 2023 17:49:23.982 [8616:3568:1103/174923.970:ERROR:device_event_log_impl.cc(192)] [17:49:23.970] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+
+11월 07, 2023 10:17:26.504 NEW SESSION
+11월 07, 2023 10:17:26.504 [3040:12148:1107/101726.501:ERROR:device_event_log_impl.cc(192)] [10:17:26.502] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+11월 07, 2023 10:33:49.832 [3040:6428:1107/103349.831:ERROR:cert_verify_proc_builtin.cc(696)] CertVerifyProcBuiltin for cookie-sync.api.soundcast.fm failed:
+11월 07, 2023 10:33:49.832 ----- Certificate i=0 (CN=*.api.soundcast.fm) -----
+11월 07, 2023 10:33:49.832 ERROR: Time is after notAfter
+11월 07, 2023 10:33:49.832 
+11월 07, 2023 10:33:49.832 
+11월 07, 2023 13:12:09.276 [2560:7848:1107/131209.276:ERROR:device_event_log_impl.cc(192)] [13:12:09.276] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+11월 07, 2023 14:57:39.844 [2560:7848:1107/145739.844:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 07, 2023 14:57:39.845 [2560:7848:1107/145739.844:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 07, 2023 14:57:40.383 [2560:7848:1107/145740.383:ERROR:device_event_log_impl.cc(192)] [14:57:40.384] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+11월 07, 2023 15:17:01.03 [2560:7848:1107/151701.003:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
+11월 07, 2023 15:46:46.176 [2560:7848:1107/154646.175:ERROR:interface_endpoint_client.cc(702)] Message 3 rejected by interface blink.mojom.Widget
+11월 07, 2023 15:46:46.185 [2560:7848:1107/154646.185:ERROR:interface_endpoint_client.cc(702)] Message 3 rejected by interface blink.mojom.Widget

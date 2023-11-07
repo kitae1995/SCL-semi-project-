@@ -3,10 +3,10 @@ package com.spring.myweb.scluser.service;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.spring.myweb.user.dto.UserInfoResponseDTO;
-import com.spring.myweb.user.dto.UserJoinRequestDTO;
-import com.spring.myweb.user.entity.User;
-import com.spring.myweb.user.mapper.IUserMapper;
+import com.spring.myweb.scluser.dto.SclInfoResponseDTO;
+import com.spring.myweb.scluser.dto.SclJoinRequestDTO;
+import com.spring.myweb.scluser.entity.SclUser;
+import com.spring.myweb.scluser.mapper.ISclUserMapper;
 
 import lombok.RequiredArgsConstructor;
 
@@ -14,81 +14,70 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class SclService {
 
-	private final IUserMapper mapper;
+	private final ISclUserMapper mapper;
 	private final BCryptPasswordEncoder encoder;
 
 	public int idCheck(String account) {
 		return mapper.idCheck(account);
 	}
 
-	public void join(UserJoinRequestDTO dto) {
-		//회원 비밀번호 암호화 인코딩
-		System.out.println("암호화 하기 전 비번: " + dto.getUserPw());
-		
-		//비밀번호를 암호화해서 dto에 다시 저장하기
-		String securePw = encoder.encode(dto.getUserPw());
+	public void join(SclJoinRequestDTO dto) {
+		System.out.println("암호화 하기 전 비번: " + dto.getSclPw());
+		String securePw = encoder.encode(dto.getSclPw());
 		System.out.println("암호화 후 비번: " + securePw);
-		dto.setUserPw(securePw);
-		
-		//dto를 entity로 변환
-		User user = User.builder()
-				.userId(dto.getUserId())
-				.userPw(dto.getUserPw())
-				.userName(dto.getUserName())
-				.userPhone1(dto.getUserPhone1())
-				.userPhone2(dto.getUserPhone2())
-				.userEmail1(dto.getUserEmail1())
-				.userEmail2(dto.getUserEmail2())
+		dto.setSclPw(securePw);
+
+		SclUser scl = SclUser.builder()
+				.sclId(dto.getSclId())
+				.sclPw(dto.getSclPw())
+				.sclName(dto.getSclName())
+				.sclPhone1(dto.getSclPhone1())
+				.sclPhone2(dto.getSclPhone2())
+				.sclEmail1(dto.getSclEmail1())
+				.sclEmail2(dto.getSclEmail2())
 				.addrBasic(dto.getAddrBasic())
 				.addrDetail(dto.getAddrDetail())
 				.addrZipNum(dto.getAddrZipNum())
 				.build();
-		mapper.join(user);
+		mapper.join(scl);
 	}
 
-	public String login(String userId, String userPw) {
-		String dbPw = mapper.login(userId);
-		if(dbPw != null) {
-			//날것의 비밀번호와 암호화된 비밀번호의 일치 여부를 알려주는 matches()
-			if(encoder.matches(userPw, dbPw)) {
-				return userId;
+	public String login(String sclId, String sclPw) {
+		String dbPw = mapper.login(sclId);
+		if (dbPw != null) {
+			if (encoder.matches(sclPw, dbPw)) {
+				return sclId;
 			}
 		}
 		return null;
 	}
 
-	public UserInfoResponseDTO getInfo(String id) {
-		User user = mapper.getInfo(id);
-		return UserInfoResponseDTO.toDTO(user);	
+	public SclInfoResponseDTO getInfo(String id) {
+		SclUser scl = mapper.getInfo(id);
+		return SclInfoResponseDTO.toDTO(scl);
 	}
 
-	public void updateUser(UserJoinRequestDTO dto) {
-		//회원 비밀번호 암호화 인코딩
-				System.out.println("암호화 하기 전 비번: " + dto.getUserPw());
-				
-				//비밀번호를 암호화해서 dto에 다시 저장하기
-				String securePw = encoder.encode(dto.getUserPw());
-				System.out.println("암호화 후 비번: " + securePw);
-				dto.setUserPw(securePw);
-				
-				//dto를 entity로 변환
-				User user = User.builder()
-						.userPw(dto.getUserPw())
-						.userName(dto.getUserName())
-						.userPhone1(dto.getUserPhone1())
-						.userPhone2(dto.getUserPhone2())
-						.userEmail1(dto.getUserEmail1())
-						.userEmail2(dto.getUserEmail2())
-						.addrBasic(dto.getAddrBasic())
-						.addrDetail(dto.getAddrDetail())
-						.addrZipNum(dto.getAddrZipNum())
-						.build();
-				mapper.updateUser(user);
-		
+	public void updateUser(SclJoinRequestDTO dto) {
+		System.out.println("암호화 하기 전 비번: " + dto.getSclPw());
+		String securePw = encoder.encode(dto.getSclPw());
+		System.out.println("암호화 후 비번: " + securePw);
+		dto.setSclPw(securePw);
+
+		SclUser scl = SclUser.builder()
+				.sclPw(dto.getSclPw())
+				.sclName(dto.getSclName())
+				.sclPhone1(dto.getSclPhone1())
+				.sclPhone2(dto.getSclPhone2())
+				.sclEmail1(dto.getSclEmail1())
+				.sclEmail2(dto.getSclEmail2())
+				.addrBasic(dto.getAddrBasic())
+				.addrDetail(dto.getAddrDetail())
+				.addrZipNum(dto.getAddrZipNum())
+				.build();
+		mapper.updateUser(scl);
 	}
-	
-	
 }
+
 
 
 

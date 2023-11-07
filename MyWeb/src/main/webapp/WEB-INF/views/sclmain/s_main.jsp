@@ -55,9 +55,8 @@
 								</p>
 							</div>
 							<div class="link-inner">
-								<a href="##"><i class="glyphicon glyphicon-thumbs-up"></i>좋아요</a>
-								<a href="##"><i class="glyphicon glyphicon-comment"></i>댓글달기</a>
-								<a href="##"><i class="glyphicon glyphicon-share-alt"></i>공유하기</a>
+								<a href="##"><img src="${pageContext.request.contextPath}/img/like1.png" width="20px" height="20px" />좋아요</a>	
+								<a href="##"><i class="glyphicon glyphicon-share-alt"></i>댓글달기</a>
 							</div>
 						</div>
 					</div>
@@ -92,9 +91,8 @@
 								<br>문의 전화 : 1522-5009</span> </p>
 							</div>
 							<div class="link-inner">
-								<a href="##"><i class="glyphicon glyphicon-thumbs-up"></i>좋아요</a>
-								<a href="##"><i class="glyphicon glyphicon-comment"></i>댓글달기</a>
-								<a href="##"><i class="glyphicon glyphicon-share-alt"></i>공유하기</a>
+								<a href="##"><img src="${pageContext.request.contextPath}/img/like1.png" width="20px" height="20px" />좋아요</a>	
+								<a href="##"><i class="glyphicon glyphicon-share-alt"></i>댓글달기</a>
 							</div>
 						</div>
 					</div>

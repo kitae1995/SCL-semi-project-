@@ -10,6 +10,8 @@
 	
 	<bean id="userLoginHandler" class="com.spring.myweb.util.interceptor.UserLoginHandler" />
 	<bean id="userAuth" class="com.spring.myweb.util.interceptor.UserAuthHandler" />
+	<bean id="scluserLoginHandler" class="com.spring.myweb.util.interceptor.SclUserLoginHandler" />
+	<bean id="scluserAuth" class="com.spring.myweb.util.interceptor.SclUserAuthHandler" />
 	
 	<mvc:interceptors>
 		
@@ -19,12 +21,24 @@
 			<ref bean="userLoginHandler"/>
 		</mvc:interceptor>
 		
+		<mvc:interceptor>
+			<mvc:mapping path="/scluser/sclLogin"/>
+			<ref bean="scluserLoginHandler"/>
+		</mvc:interceptor>
+		
 		<!-- 로그인 권한 체크 인터셉트 url 매핑 -->
 		<mvc:interceptor>
 			<mvc:mapping path="/freeboard/freeRegist"/>
 			<mvc:mapping path="/user/userMypage"/>
 			<!-- <mvc:mapping path="/freeboard/**"/> 로그인을 안한다면 글쓰기는 물론 조회조차 안되게--> 
 			<ref bean="userAuth" />
+		</mvc:interceptor>
+		
+		<mvc:interceptor>
+			<mvc:mapping path="/sclboard/SclRegist"/>
+			<mvc:mapping path="/scluser/sclMypage"/>
+			<!-- <mvc:mapping path="/freeboard/**"/> 로그인을 안한다면 글쓰기는 물론 조회조차 안되게--> 
+			<ref bean="scluserAuth" />
 		</mvc:interceptor>
 		
 	</mvc:interceptors>

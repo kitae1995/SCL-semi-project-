@@ -13,11 +13,11 @@
                     <form method="post" name="loginForm">
                         <div class="form-group"><!--사용자클래스선언-->
                             <label for="id">아이디</label>
-                            <input type="text" name="userId" class="form-control" id="id" placeholder="아이디">
+                            <input type="text" name="sclId" class="form-control" id="id" placeholder="아이디">
                          </div>
                          <div class="form-group"><!--사용자클래스선언-->
                             <label for="id">비밀번호</label>
-                            <input type="password" name="userPw" class="form-control" id="id" placeholder="비밀번호">
+                            <input type="password" name="sclPw" class="form-control" id="id" placeholder="비밀번호">
                          </div>
                          <div class="form-group">
                             <button type="button" id="loginBtn" class="btn btn-info btn-block">로그인</button>
@@ -44,11 +44,11 @@
         //id, pw 입력란이 공백인 지 아닌지 확인한 후, 공백이 아니라면 submit을 진행하세요.
         //요청 url은 /user/userLogin -> post로 갑니다. (비동기 아니에요!)
         document.getElementById('loginBtn').onclick = () => {
-            if(document.loginForm.userId.value === '') {
+            if(document.loginForm.sclId.value === '') {
                 alert('아이디를 적어야 로그인을 하죠~');
                 return;
             }
-            if(document.loginForm.userPw.value === '') {
+            if(document.loginForm.sclPw.value === '') {
                 alert('비밀번호를 작성하세요!');
                 return;
             }
@@ -57,7 +57,7 @@
         }
 
         document.getElementById('joinBtn').onclick = () => {
-            location.href='${pageContext.request.contextPath}/user/userJoin';
+            location.href='${pageContext.request.contextPath}/scluser/sclJoin';
         }
 
     	

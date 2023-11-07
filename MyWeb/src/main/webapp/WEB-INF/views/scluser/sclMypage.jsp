@@ -27,56 +27,56 @@
                                 <tbody class="m-control">
                                     <tr>
                                         <td class="m-title">*ID</td>
-                                        <td><input class="form-control input-sm" name="userId" value="${login}" readonly></td>
+                                        <td><input class="form-control input-sm" name="sclId" value="${login}" readonly></td>
                                     </tr>
                                     <tr>
                                         <td class="m-title">*이름</td>
-                                        <td><input class="form-control input-sm" name="userName" value="${userInfo.userName}"></td>
+                                        <td><input class="form-control input-sm" name="sclName" value="${sclInfo.sclName}"></td>
                                     </tr>
                                     <tr>
                                         <td class="m-title">*비밀번호</td>
-                                        <td><input class="form-control input-sm" name="userPw"></td>
+                                        <td><input class="form-control input-sm" name="sclPw"></td>
                                     </tr>
                                     <tr>
                                         <td class="m-title">*비밀번호확인</td>
-                                        <td><input class="form-control input-sm" name="userPwChk"></td>
+                                        <td><input class="form-control input-sm" name="sclPwChk"></td>
                                     </tr>
                                     <tr>
                                         <td class="m-title">*E-mail</td>
                                         <td>
-                                            <input class="form-control input-sm" name="userEmail1" value="${userInfo.userEmail1}">
-                                            <select class="form-control input-sm sel" name="userEmail2">
-                                                <option ${userInfo.userEmail2 == '@naver.com' ? 'selected' : ''}>@naver.com</option>
-                                                <option ${userInfo.userEmail2 == '@daum.net' ? 'selected' : ''}>@daum.net</option>
-                                                <option ${userInfo.userEmail2 == '@gmail.com' ? 'selected' : ''}>@gmail.com</option>
+                                            <input class="form-control input-sm" name="sclEmail1" value="${sclInfo.sclEmail1}">
+                                            <select class="form-control input-sm sel" name="sclEmail2">
+                                                <option ${sclInfo.sclEmail2 == '@naver.com' ? 'selected' : ''}>@naver.com</option>
+                                                <option ${sclInfo.sclEmail2 == '@daum.net' ? 'selected' : ''}>@daum.net</option>
+                                                <option ${sclInfo.sclEmail2 == '@gmail.com' ? 'selected' : ''}>@gmail.com</option>
                                             </select>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="m-title">휴대폰</td>
                                         <td>
-                                            <select class="form-control input-sm sel" name="userPhone1">
-                                                <option ${userInfo.userPhone1 == '010' ? 'selected' : ''}>010</option>
-                                                <option ${userInfo.userPhone1 == '011' ? 'selected' : ''}>011</option>
-                                                <option ${userInfo.userPhone1 == '017' ? 'selected' : ''}>017</option>
-                                                <option ${userInfo.userPhone1 == '018' ? 'selected' : ''}>018</option>
+                                            <select class="form-control input-sm sel" name="sclPhone1">
+                                                <option ${sclInfo.sclPhone1 == '010' ? 'selected' : ''}>010</option>
+                                                <option ${sclInfo.sclPhone1 == '011' ? 'selected' : ''}>011</option>
+                                                <option ${sclInfo.sclPhone1 == '017' ? 'selected' : ''}>017</option>
+                                                <option ${sclInfo.sclPhone1 == '018' ? 'selected' : ''}>018</option>
                                             </select>
-                                            <input class="form-control input-sm" name="userPhone2" value="${userInfo.userPhone2}">
+                                            <input class="form-control input-sm" name="sclPhone2" value="${sclInfo.sclPhone2}">
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="m-title">우편번호</td>
-                                        <td><input class="form-control input-sm" name="addrZipNum" value="${userInfo.addrZipNum}" readonly>
+                                        <td><input class="form-control input-sm" name="addrZipNum" value="${sclInfo.addrZipNum}" readonly>
                                         	<button type="button" class="btn btn-primary" id="addBtn">주소찾기</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="m-title">주소</td>
-                                        <td><input class="form-control input-sm add" name="addrBasic" value="${userInfo.addrBasic}"></td>
+                                        <td><input class="form-control input-sm add" name="addrBasic" value="${sclInfo.addrBasic}"></td>
                                     </tr>
                                     <tr>
                                         <td class="m-title">상세주소</td>
-                                        <td><input class="form-control input-sm add" name="addrDetail" value="${userInfo.addrDetail}"></td>
+                                        <td><input class="form-control input-sm add" name="addrDetail" value="${sclInfo.addrDetail}"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -103,7 +103,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <c:forEach var="b" items="${userInfo.userBoardList}">
+                                    <c:forEach var="b" items="${sclInfo.SclBoardList}">
                                     <tr>
                                         <td>${b.bno}</td>
                                         <td><a href="##">${b.title}</a></td>

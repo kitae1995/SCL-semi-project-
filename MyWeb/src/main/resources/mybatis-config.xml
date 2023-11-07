@@ -25,6 +25,7 @@
 		<typeAlias type="com.spring.myweb.reply.entity.Reply" alias="reply" />
 		<typeAlias type="com.spring.myweb.snsboard.entity.SnsBoard" alias="sns" />
 		<typeAlias type="com.spring.myweb.sclboard.entity.SclBoard" alias="sclboard" />
+		<typeAlias type="com.spring.myweb.scluser.entity.SclUser" alias="scluser" />
 		
 	</typeAliases>
 

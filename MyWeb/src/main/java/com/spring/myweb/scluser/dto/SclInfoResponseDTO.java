@@ -3,9 +3,9 @@ package com.spring.myweb.scluser.dto;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.spring.myweb.freeboard.dto.response.FreeListResponseDTO;
-import com.spring.myweb.freeboard.entity.FreeBoard;
-import com.spring.myweb.user.entity.User;
+import com.spring.myweb.sclboard.dto.response.SclListResponseDTO;
+import com.spring.myweb.sclboard.entity.SclBoard;
+import com.spring.myweb.scluser.entity.SclUser;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,33 +20,33 @@ import lombok.ToString;
 @Builder
 public class SclInfoResponseDTO {
 	
-	private String userName;
-	private String userPhone1;
-	private String userPhone2;
-	private String userEmail1;
-	private String userEmail2;
+	private String sclName;
+	private String sclPhone1;
+	private String sclPhone2;
+	private String sclEmail1;
+	private String sclEmail2;
 	private String addrBasic;
 	private String addrDetail;
 	private String addrZipNum;
 	
-	private List<FreeListResponseDTO> userBoardList;
+	private List<SclListResponseDTO> SclBoardList;
 	
-	public static SclInfoResponseDTO toDTO(User user) {
-		List<FreeListResponseDTO> list = new ArrayList<>();
-		for(FreeBoard board : user.getUserBoardList()) {
-			list.add(new FreeListResponseDTO(board));
+	public static SclInfoResponseDTO toDTO(SclUser scl) {
+		List<SclListResponseDTO> list = new ArrayList<>();
+		for(SclBoard board : scl.getSclBoardList()) {
+			list.add(new SclListResponseDTO(board));
 		}	
 		
 		return SclInfoResponseDTO.builder()
-								.userName(user.getUserName())
-								.userPhone1(user.getUserPhone1())
-								.userPhone2(user.getUserPhone2())
-								.userEmail1(user.getUserEmail1())
-								.userEmail2(user.getUserEmail2())
-								.addrBasic(user.getAddrBasic())
-								.addrDetail(user.getAddrDetail())
-								.addrZipNum(user.getAddrZipNum())
-								.userBoardList(list)
+								.sclName(scl.getSclName())
+								.sclPhone1(scl.getSclPhone1())
+								.sclPhone2(scl.getSclPhone2())
+								.sclEmail1(scl.getSclEmail1())
+								.sclEmail2(scl.getSclEmail2())
+								.addrBasic(scl.getAddrBasic())
+								.addrDetail(scl.getAddrDetail())
+								.addrZipNum(scl.getAddrZipNum())
+								.SclBoardList(list)
 								.build();
 	}
 	

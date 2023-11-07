@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.myweb.scluser.mapper.ISclUserMapper">
+
+	<!-- collection 타입의 변수에 값을 매길 때에는 
+	어떤 객체로 포장해서 넣을지를 새로운 resultMap으로 선언해 주셔야 합니다. 
+	sql에서 조회하는 컬럼에 대한 모든 정보를 작성해 주셔야 합니다. -->
+	<resultMap type="scluser" id="sclMap">
+		<result property="sclName" column="scl_name" />
+		<result property="sclPhone1" column="scl_phone1" />
+		<result property="sclPhone2" column="scl_phone2" />
+		<result property="sclEmail1" column="scl_email1" />
+		<result property="sclEmail2" column="scl_email2" />
+		<result property="addrBasic" column="addr_basic" />
+		<result property="addrDetail" column="addr_detail" />
+		<result property="addrZipNum" column="addr_zip_num" />
+		<collection property="SclBoardList" resultMap="list" />
+	</resultMap>
+
+	<!-- 위에 있는 collection에 들어갈 객체가 어떤 식으로 포장될 지를 명시해 주는 resultMap -->
+	<resultMap type="sclboard" id="list">
+		<id property="bno" column="bno" />
+		<result property="title" column="title" />
+		<result property="regDate" column="reg_date" />
+	</resultMap>
+
+	<insert id="join">
+		INSERT INTO scls
+		(scl_id, scl_pw, scl_name,
+		scl_phone1, scl_phone2, scl_email1,
+		scl_email2, addr_basic, addr_detail, addr_zip_num)
+		VALUES(#{sclId}, #{sclPw},
+		#{sclName}, #{sclPhone1}, #{sclPhone2},
+		#{sclEmail1},
+		#{sclEmail2}, #{addrBasic}, #{addrDetail}, #{addrZipNum})
+	</insert>
+
+	<select id="idCheck" resultType="int">
+		SELECT COUNT(*)
+		FROM scls
+		WHERE
+		scl_id = #{id}
+	</select>
+
+	<select id="login" resultType="string">
+		SELECT scl_pw FROM scls
+		WHERE
+		scl_id = #{id}
+	</select>
+
+	<select id="getInfo" resultMap="sclMap">
+		SELECT
+		scl_name, scl_phone1, scl_phone2,
+		scl_email1, scl_email2, addr_basic,
+		addr_detail, addr_zip_num,
+		b.bno,
+		b.title,
+		b.reg_date
+		FROM scls s
+		LEFT JOIN sclboard b
+		ON s.scl_id = b.writer
+		WHERE scl_id
+		= #{id}
+		ORDER BY b.bno DESC
+	</select>
+
+	<update id="updateUser">
+		UPDATE scls
+		SET scl_pw = #{sclPw}, scl_name =
+		#{sclName},
+		scl_email1 = #{sclEmail1}, scl_email2 = #{sclEmail2},
+		scl_phone1 = #{sclPhone1}, scl_phone2 = #{sclPhone2},
+		addr_basic =
+		#{addrBasic}, addr_detail = #{addrDetail},
+		addr_zip_num = #{addrZipNum}
+		WHERE scl_id = #{sclId}
+	</update>
+
+
+
+
+</mapper>
+
+
+
+
+
+
+
+

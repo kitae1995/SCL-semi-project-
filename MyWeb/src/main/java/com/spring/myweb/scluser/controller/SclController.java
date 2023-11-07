@@ -1,4 +1,4 @@
- package com.spring.myweb.scluser.controller;
+package com.spring.myweb.scluser.controller;
 
 import javax.servlet.http.HttpSession;
 
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.spring.myweb.user.dto.UserJoinRequestDTO;
-import com.spring.myweb.user.service.UserService;
+import com.spring.myweb.scluser.dto.SclJoinRequestDTO;
+import com.spring.myweb.scluser.service.SclService;
 import com.spring.myweb.util.MailSenderService;
 
 import lombok.RequiredArgsConstructor;
@@ -23,12 +23,12 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class SclController {
 	
-	private final UserService service;
+	private final SclService service;
 	private final MailSenderService mailService;
 	
 	//회원가입 페이지로 이동
-	@GetMapping("/userJoin")
-	public void userJoin() {}
+	@GetMapping("/sclJoin")
+	public void sclJoin() {}
 	
 	//아이디 중복 확인(비동기)
 	/*
@@ -58,7 +58,7 @@ public class SclController {
 	
 	//회원 가입 처리
 	@PostMapping("/join")
-	public String join(UserJoinRequestDTO dto, RedirectAttributes ra) {
+	public String join(SclJoinRequestDTO dto, RedirectAttributes ra) {
 		service.join(dto);
 		/*
 		 redirect 상황에서 model 객체를 사용하면 데이터가 제대로 전달되지 않습니다.
@@ -70,40 +70,37 @@ public class SclController {
 		 데이터가 url에 노출되지 않고, 한 번 이용한 후에는 알아서 소멸합니다.
 		 */
 		ra.addFlashAttribute("msg", "joinSuccess");
-		return "redirect:/user/userLogin";
+		return "redirect:/scluser/sclLogin";
 	}
 	
 	//로그인 페이지로 이동 요청
-	@GetMapping("/userLogin")
+	@GetMapping("/sclLogin")
 	public void login() {}
 	
 	//로그인 요청
-	@PostMapping("/userLogin")
-	public void login(String userId, String userPw, Model model) {
-		System.out.println("나는 UserController의 login이다!!!!");
-		model.addAttribute("result", service.login(userId, userPw));
+	@PostMapping("/sclLogin")
+	public void login(String sclId, String sclPw, Model model) {
+		System.out.println("나는 SclController의 login이다!!!!");
+		model.addAttribute("result", service.login(sclId, sclPw));
 	}
 	
 	//마이페이지 이동 요청
-	@GetMapping("/userMypage")
-	public void userMypage(HttpSession session, Model model) {
-		//마이페이지는 로그인 한 사람만 이동 가능 -> 세션에 아이디가 있다!
+	@GetMapping("/sclMypage")
+	public void sclMypage(HttpSession session, Model model) {
 		String id = (String) session.getAttribute("login");
 		model.addAttribute("userInfo", service.getInfo(id));
 	}
 	
 	//마이페이지 수정요청
-	@PostMapping ("/userMypage")
-	public String userMyPage(UserJoinRequestDTO dto, RedirectAttributes rs){
+	@PostMapping("/sclMypage")
+	public String sclMyPage(SclJoinRequestDTO dto, RedirectAttributes rs){
 		System.out.println("수정 요청이 들어왔습니다");
 		service.updateUser(dto);
 		rs.addFlashAttribute("msg", "updateSuccess");
-		return "redirect:/user/userMypage";
+		return "redirect:/scluser/sclMypage";
 	}
-	
-	
-
 }
+
 
 
 

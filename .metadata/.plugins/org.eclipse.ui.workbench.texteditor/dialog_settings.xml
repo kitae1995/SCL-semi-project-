@@ -5,35 +5,35 @@
 		<item key="DIALOG_Y_ORIGIN" value="392"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="logo"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="LOGO"/>
-			<item value="&lt;script&gt;"/>
-			<item value="show"/>
-			<item value="hi"/>
-			<item value="hi\"/>
-			<item value="hide"/>
-			<item value="map"/>
-			<item value="Latlng"/>
-			<item value="Latㅣng"/>
+			<item value="glyphicon glyphicon-share-alt"/>
+			<item value="ps"/>
+			<item value="&lt;div id=&quot;map&quot; style=&quot;width"/>
 			<item value="app"/>
-			<item value="JangMenu"/>
-			<item value="latlng"/>
-			<item value="jangpositions."/>
-			<item value="jangpositions.l"/>
-			<item value="jangp"/>
+			<item value="glyphicon glyphicon-comment"/>
+			<item value="cnt"/>
+			<item value="$cnt"/>
+			<item value="좋아요"/>
+			<item value="contentDiv"/>
+			<item value="#likeBtn"/>
+			<item value="scljoin"/>
+			<item value="SclJoin"/>
+			<item value="users"/>
+			<item value="user"/>
+			<item value="joinBtn"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1383"/>
-		<item key="DIALOG_Y_ORIGIN" value="262"/>
+		<item key="DIALOG_X_ORIGIN" value="715"/>
+		<item key="DIALOG_Y_ORIGIN" value="434"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="403"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

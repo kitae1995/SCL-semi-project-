@@ -15,13 +15,13 @@ import lombok.ToString;
 @Builder
 public class SclJoinRequestDTO {
 	
-	private String userId;
-	private String userPw;
-	private String userName;
-	private String userPhone1;
-	private String userPhone2;
-	private String userEmail1;
-	private String userEmail2;
+	private String sclId;
+	private String sclPw;
+	private String sclName;
+	private String sclPhone1;
+	private String sclPhone2;
+	private String sclEmail1;
+	private String sclEmail2;
 	private String addrBasic;
 	private String addrDetail;
 	private String addrZipNum;
