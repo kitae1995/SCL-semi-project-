@@ -1,0 +1,51 @@
+/* body */
+
+.main-content {
+  max-width: 2000px;
+  height: 100vh;
+  padding-top: 20px;
+
+  text-align: center;
+  background-color: #fff;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-image: url("../img/st2.jpg");
+  background-size: cover;
+}
+
+.explore-button a {
+  text-decoration: none; /* Remove the underline */
+  color: #fff; /* Make the text color transparent */
+}
+
+.explore-button a:hover {
+  color: #fff; /* Set the desired text color on hover */
+}
+
+h1 {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 20px;
+  margin-top: 220px;
+}
+
+p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+.explore-button {
+  background-color: #4f3b7a;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 30px;
+}
+
+.explore-button:hover {
+  background-color: #9e65fa;
+}

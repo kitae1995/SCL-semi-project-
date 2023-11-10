@@ -119,6 +119,28 @@ function searchPlaces() {
     ps.keywordSearch( keyword, placesSearchCB); 
 }
 
+////
+function searchPlacesCB(data, status, pagination) {
+    if (status === kakao.maps.services.Status.OK) {
+        // 정상적으로 검색이 완료됐으면
+        // 검색 목록과 마커를 표출합니다
+        displayPlaces(data);
+
+        // 페이지 번호를 표출합니다
+        displayPagination(pagination);
+
+        // places 객체를 전역 변수로 설정
+        window.places = data;
+    } else if (status === kakao.maps.services.Status.ZERO_RESULT) {
+        alert('검색 결과가 존재하지 않습니다.');
+        return;
+    } else if (status === kakao.maps.services.Status.ERROR) {
+        alert('검색 결과 중 오류가 발생했습니다.');
+        return;
+    }
+}
+/////
+
 // 장소검색이 완료됐을 때 호출되는 콜백함수 입니다
 function placesSearchCB(data, status, pagination) {
     if (status === kakao.maps.services.Status.OK) {
@@ -217,13 +239,15 @@ function getListItem(index, places) {
     }
                  
       itemStr += '  <span class="tel">' + places.phone  + '</span>' +
-      '<input type="button" id="likeBtn" class="btn btn-outline-danger" value="찜하기♥" onclick="javascript:addplace('+(index+1)+')"/>' +
+      '<input type="button" class="btn btn-outline-danger" value="찜하기♡" />' +
                 '</div>';           
 
     el.innerHTML = itemStr;
     el.className = 'item';
 
     return el;
+    
+    
 }
 
 // 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
@@ -307,9 +331,72 @@ function removeAllChildNods(el) {
 	 document.getElementById('keyword').value = param;
  }
  
- document.getElementById('likeBtn').addEventListener('click', function() {
-	    console.log('버튼이 클릭되었음!');
-	});
+
+ //찜하기 버튼 클릭 이벤트 
+ document.addEventListener('click', (e) => {
+	 if(!e.target.matches('input')) {
+		 console.log('이벤트 대상 아님!');
+		 return;
+	 }
+	 
+	const id = '${login}'; //현재 로그인 중인 사용자의 아이디.
+    if(id === '') {
+        alert('로그인이 필요합니다.');
+        return;
+    }
+
+    // if (button.value === "찜하기♡") {
+    //     button.value = "찜하기♥";
+    // } else {
+    //     button.value = "찜하기♡";
+    // }
+    const placeName = e.target.parentNode.firstElementChild;
+    const placeAddr = placeName.nextElementSibling;
+    const placeRaddr = placeAddr.nextElementSibling;
+    const placeTel = placeAddr.nextElementSibling.nextElementSibling;
+    
+   
+    // console.log('가게명: ', placeName.textContent);
+    // console.log('주소: ', placeAddr.textContent);
+    // console.log('전화번호: ', placeTel.textContent);
+
+    const reqObj = {
+        memberId: id,
+        name: placeName.textContent,
+        address: placeAddr.textContent,
+        raddress: placeRaddr.textContent,
+        phone: placeTel.textContent
+        
+
+    }
+	    
+	 	
+	 // fetch를 사용하여 places.place_name을 JSON 데이터로 전송
+    fetch('${pageContext.request.contextPath}/sclmain/addplace', {
+        method: 'POST', // HTTP 메서드 선택 (POST, GET 등)
+        headers: {
+            'Content-Type': 'application/json', // 데이터 타입 설정 (JSON)
+        },
+        body: JSON.stringify(reqObj), // JSON 데이터로 변환
+    })
+    .then(response => response.text()) // 서버에서의 응답을 JSON으로 파싱
+    .then(data => {
+        console.log('서버 응답:', data); // 서버 응답을 출력하거나 처리
+    })
+    .catch(error => {
+        console.error('오류 발생:', error);
+    });
+    //////////////////////////////////////
+    
+            
+    console.log("addplace 함수가 호출되었습니다.");
+    // 다른 작업을 수행할 수 있습니다.
+
+
+	 
+ });
+ 
+
 
 </script>
 </body>

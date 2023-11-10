@@ -31,7 +31,7 @@ public class FreeBoardService implements IFreeBoardService {
 				.build());
 
 	}
-
+	
 	@Override
 	public List<FreeListResponseDTO> getList(Page page) {
 		List<FreeListResponseDTO> dtoList = new ArrayList<>();

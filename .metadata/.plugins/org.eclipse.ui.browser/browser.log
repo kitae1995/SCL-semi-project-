@@ -305,3 +305,14 @@
 11월 07, 2023 15:17:01.03 [2560:7848:1107/151701.003:ERROR:interface_endpoint_client.cc(702)] Message 1 rejected by interface blink.mojom.WidgetHost
 11월 07, 2023 15:46:46.176 [2560:7848:1107/154646.175:ERROR:interface_endpoint_client.cc(702)] Message 3 rejected by interface blink.mojom.Widget
 11월 07, 2023 15:46:46.185 [2560:7848:1107/154646.185:ERROR:interface_endpoint_client.cc(702)] Message 3 rejected by interface blink.mojom.Widget
+
+11월 09, 2023 16:48:25.928 NEW SESSION
+11월 09, 2023 16:48:25.928 [13356:1136:1109/164825.913:ERROR:device_event_log_impl.cc(192)] [16:48:25.913] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+11월 09, 2023 18:09:02.127 [13356:1136:1109/180902.127:ERROR:interface_endpoint_client.cc(702)] Message 0 rejected by interface blink.mojom.WidgetHost
+
+11월 10, 2023 10:05:50.640 NEW SESSION
+11월 10, 2023 10:05:50.640 [16112:6508:1110/100550.638:ERROR:device_event_log_impl.cc(192)] [10:05:50.637] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+11월 10, 2023 15:46:25.278 [4568:2492:1110/154625.277:ERROR:debug_utils.cc(14)] Hit debug scenario: 3
+
+11월 10, 2023 16:13:40.107 NEW SESSION
+11월 10, 2023 16:13:40.107 [6004:8628:1110/161340.107:ERROR:sharing_service.cc(250)] Device un-registration failed with fatal error

@@ -1,103 +1,104 @@
 package com.spring.myweb.sclmain.controller;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import com.spring.myweb.freeboard.dto.page.Page;
+import com.spring.myweb.freeboard.dto.page.PageCreator;
+import com.spring.myweb.sclmain.dto.PlaceRequestDTO;
+import com.spring.myweb.sclmain.entity.Place;
 import com.spring.myweb.sclmain.service.MapService;
-import com.spring.myweb.snsboard.service.SnsBoardService;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
 
 @Controller
+@RequiredArgsConstructor
 @RequestMapping("/sclmain")
+@Slf4j
 public class sMainController {
 	
 	private final MapService service;
 	
 	@GetMapping("/s_main")
 	public void stest() {}
-	
-	@GetMapping("/s_main2")
-	public void stest2() {}
+//	
+//	@GetMapping("/s_main2")
+//	public void stest2() {}
 	
 	@GetMapping("/s_main3")
 	public void stest3() {}
 	
-	@GetMapping("mapMypage")
-	public void mapMypage() {}
-	
-	//찜 목록
-	@GetMapping("mapMypage")
-	public void likePlace(Model model, Authentication authentication,
-			@RequestParam(value = "page", defaultValue = "1")Integer page) {
-		String apikey = "1aef10108def276437df95d26ab8399f";
-		model.addAttribute("apikey",apikey);
-		String userId = authentication.getName();
-		Map<String,Object> result = service.likeplace(page,userId);
-		model.addAllAttributes(result);
+	@GetMapping("/mapMypage")
+	public void mapMypage(Page page, Model model) {
+		System.out.println("/sclmain/mapMypage: GET!");
+		PageCreator creator;
+		int totalCount = service.getTotal(page);
+		if(totalCount == 0) {
+			page.setKeyword(null);
+			page.setCondition(null);
+			creator = new PageCreator(page, service.getTotal(page));
+			model.addAttribute("msg", "searchFail");
+		} else {
+			creator = new PageCreator(page, totalCount);			
+		}
+		
+		model.addAttribute("boardList", service.getList(page));
+		model.addAttribute("pc", creator);
 	}
+	
+//	//찜 목록
+//	@GetMapping("mapMypage")
+//	public void likePlace(Model model, Authentication authentication,
+//			@RequestParam(value = "page", defaultValue = "1")Integer page) {
+//		String apikey = "1aef10108def276437df95d26ab8399f";
+//		model.addAttribute("apikey",apikey);
+//		String userId = authentication.getName();
+//		Map<String,Object> result = service.likeplace(page,userId);
+//		model.addAllAttributes(result);
+//	}
 
-	// 찜하기
-	@PostMapping("addPlace") 
+	 //찜하기
+	@PostMapping("/addplace") 
 	@ResponseBody
-	public ResponseEntity<String> bookAccept (@RequestBody Place place, Authentication authentication) { 
-		if (authentication == null) {
-	return ResponseEntity.ok()
-			.body("로그인 후 이용하실 수 있습니다.");
-	}else {
+	public ResponseEntity<String> addplace(@RequestBody PlaceRequestDTO dto) { 
 	
-	String userId = authentication.getName();
-	String address = place.getAddress();
-	//테이블에 해당 찜 가게가 있는지 조회 service int check = mapService.selectMapList (userId, address); if(check != 0) {
-	return ResponseEntity.ok()
-			.body("이미 찜한 곳 입니다.");
-	} else {
-	place.setMemberId(userId);
-	service.insertMapList(place); return ResponseEntity.ok()
-	.body("찜 완료!");
+	try {
+//		String id = reqObj.getMemberId();
+//        String name = reqObj.getName();
+//        String addr = reqObj.getAddress();
+//        String tel = reqObj.getPhone();
+        log.info("controller: {}", dto);
+        service.insertMapList(dto);
+        return new ResponseEntity<>("Data received successfully", HttpStatus.OK);
+    } catch (Exception e) {
+       
+        return new ResponseEntity<>("Error processing data", HttpStatus.INTERNAL_SERVER_ERROR);
 	}
+		
+		
 	}
+	
+	//글 삭제 요청
+		
+		@GetMapping("/delete")
+		public String delete(int bno) {
+			service.delete(bno);
+			
+			return "redirect:/sclmain/mapMypage";
+		}
+//	}
 	
 
-	// 찜하기 
-	@PostMapping("addPlace") 
-	@ResponseBody
-	public ResponseEntity<String> bookAccept (@RequestBody Place place, Authentication authentication) {
-	if (authentication == null) {
-	return ResponseEntity.ok()
-	.body("로그인 후 이용하실 수 있습니다.");
-	}else {
-	String userId = authentication.getName();
-	String address = place.getAddress();
-	//테이블에 해당 찜 가게가 있는지 조회 service
-	int check = service.selectMapList(userId, address); if(check != 0) {
-	return ResponseEntity.ok()
-			.body("이미 찜한 곳 입니다.");
-	} else {
-	place.setMemberId(userId);
-	service.insertMapList(place); 
-	return ResponseEntity.ok()
-				.body("찜 완료!");
-	}
-	}
-	}
-	
-	
 	
 	
 

@@ -37,7 +37,7 @@ public class UserLoginHandler implements HandlerInterceptor {
 				//로그인 성공한 회원에게는 세션 데이터를 생성해서 로그인 유지를 하게 해 줌.
 				HttpSession session = request.getSession();
 				session.setAttribute("login", result);
-				response.sendRedirect(request.getContextPath() + "/"); //메인 페이지로 이동
+				response.sendRedirect(request.getContextPath() + "/sclmain/s_main3"); //메인 페이지로 이동
 			} else {
 				//로그인 실패
 				modelAndView.addObject("msg", "loginFail");

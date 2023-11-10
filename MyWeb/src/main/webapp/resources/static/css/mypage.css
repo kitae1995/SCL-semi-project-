@@ -1,0 +1,102 @@
+  #wholebody {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-image: url("../img/st2.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: -10px;
+        
+      }
+
+      .mypage-container {
+        opacity: 0.9;
+        padding: 10px 40px;
+        border-radius: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        background-color: #333;
+        width: 800px;
+        height: 600px;    
+      }
+
+      h2 {
+        font-size: 35px;
+        margin-bottom: 20px;
+        color: white;
+        text-align: center;
+      }
+
+      .button-group {
+        text-align: center;
+        margin: 70px 0;
+        position: relative;
+        border: none;
+
+        padding: 15px 30px;
+        border-radius: 15px;
+        font-family: 'paybooc-Light', sans-serif;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.25s;
+      }
+      .edit {
+        width: 200px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: #f8e6e0;
+        color: #6e6e6e;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .edit:hover {
+        letter-spacing: 2px;
+        transform: scale(1.2);
+        cursor: pointer;
+        background-color: #f8e6e0;
+        color: #6e6e6e;
+      }
+      .edit:active {
+        transform: scale(1.5);
+      }
+      .like {
+        width: 200px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: #f8e6e0;
+        color: #6e6e6e;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .like:hover {
+        letter-spacing: 2px;
+        transform: scale(1.2);
+        cursor: pointer;
+        background-color: #f8e6e0;
+        color: #6e6e6e;
+      }
+      .like:active {
+        transform: scale(1.5);
+      }
+      .list {
+        width: 200px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: #f8e6e0;
+        color: #6e6e6e;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .list:hover {
+        letter-spacing: 2px;
+        transform: scale(1.2);
+        cursor: pointer;
+        background-color: #f8e6e0;
+        color: #6e6e6e;
+      }
+      .list:active {
+        transform: scale(1.5);
+      }

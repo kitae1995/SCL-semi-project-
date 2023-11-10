@@ -1,8 +1,22 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
     
-    <%@ include file="../include/header.jsp" %>
+    <%@ include file="/WEB-INF/views/include/header1.jsp" %>
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="${pageContext.request.contextPath}/css/mapMypage.css" />
+  
+  </head>
+  <body>
     
     
     <section>
@@ -15,27 +29,32 @@
                     </div>
                     <hr>
                     
+                 
+                    
                     <!--form select를 가져온다 -->
+                    
            
                    
                     <table class="table table-bordered">
                         <thead>
                             <tr>
+                            	<th>번호</th>
                                 <th>가게명</th>
-                                <th class="board-title">주소</th>
+                                <th>주소</th>
                                 <th>번호</th>
+                                <th>날짜</th>
                                 <th>찜 취소</th>
                             </tr>
                         </thead>
                         <tbody>
                         	<c:forEach var="vo" items="${boardList}">
 	                            <tr>
-	                                <td>${vo.bno}</td>
-	                                <td>
-	                                	<a href="${pageContext.request.contextPath}/freeboard/content?bno=${vo.bno}&pageNo=${pc.page.pageNo}&amount=${pc.page.amount}&keyword=${pc.page.keyword}&condition=${pc.page.condition}">${vo.title}</a>
-	                                </td>
-	                                <td>${vo.writer}</td>
-	                                <td>${vo.date}</td>
+	                            	<td>${vo.bno}</td>
+	                                <td>${vo.name}</td>
+	                                <td>${vo.address}</td>
+	                                <td>${vo.phone}</td>
+	                                <td>${vo.regdate}</td>
+	                                <td><a href="${pageContext.request.contextPath}/sclmain/delete?bno=${vo.bno}">찜 삭제</a></td>
 	                            </tr>
                             </c:forEach>
                         </tbody>
@@ -44,7 +63,7 @@
 
 
                     <!--페이지 네이션을 가져옴-->
-		    <form action="${pageContext.request.contextPath}/freeboard/freeList" name="pageForm">
+		    <form action="${pageContext.request.contextPath}/sclmain/mapMypage" name="pageForm">
                 <div class="text-center">
                     <hr>
                     <ul id="pagination" class="pagination pagination-sm">
@@ -75,7 +94,7 @@
         </div>
 	</section>
 	
-	<%@ include file="../include/footer.jsp" %>
+	<%@ include file="/WEB-INF/views/include/footer1.jsp" %>
 
     <script>
         //브라우저 창이 로딩이 완료된 후에 실행할 것을 보장하는 이벤트.
@@ -109,11 +128,18 @@
             if(msg === 'searchFail') {
                 alert('검색 결과가 없었습니다.');
             }
+            
+            
+        
+         
 
 
 
         }
 
     </script>
+    </body>
+    </html>
+    
 
 

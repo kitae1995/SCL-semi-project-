@@ -1,0 +1,195 @@
+@charset "UTF-8";
+/* styles.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  
+}
+
+/*header 왼쪽 로고랑 매뉴버튼들 */
+.header-nav {
+  background-color: rgb(44, 16, 105);
+  color: #fff;
+  padding: 15px 0px 0px 0px;
+  margin-bottom: -10px;
+  opacity: 0.5;
+  background-color: #333;
+}
+
+.header-nav img {
+  width: 30px;
+  height: 30px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 30px;
+}
+
+.nav-links ul {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #caaaff;
+}
+/*header 왼쪽 로고랑 매뉴버튼들 끝*/
+
+/*header 오른쪽 상단 사이드 바 스크롤 */
+
+.bar-1,
+.bar-2,
+.bar-3 {
+  background-color: #fff;
+  height: 4px;
+  width: 25px;
+  margin: 24px 0;
+  transition: 0.4s;
+  position: absolute; /* 절대 위치 설정 */
+  top: 37px; /* 상단에 위치하도록 설정 */
+  right: 15px;
+}
+
+/* 각각의 bar 요소의 위치 조정 */
+.bar-1 {
+  top: 36px;
+  right: 10px;
+}
+
+.bar-2 {
+  top: 44px;
+  right: 10px;
+}
+
+.bar-3 {
+  top: 52px;
+  right: 10px;
+}
+
+.menu-button {
+  display: flex;
+  justify-content: flex-end; /* .bar를 오른쪽으로 이동 */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 104px; /* 원하는 위치로 조정하세요. */
+  right: 0px;
+  background-color: #4f3b7a;
+  width: 150px; /* 드롭다운 메뉴의 너비를 조정하세요. */
+  z-index: 1;
+  border-top: 1px solid black;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  text-align: right;
+  padding: 10px;
+}
+.dropdown-menu img {
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
+}
+
+.dropdown-menu a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+/* 메뉴 버튼 클릭 시 드롭다운 메뉴 표시 */
+.menu-button.active + .dropdown-menu {
+  display: block;
+}
+
+/* header 오른쪽 상단 사이드 바 스크롤 끝 */
+
+
+/* 끝 */
+
+/*footer*/
+
+.footer {
+  background-color: rgb(44, 16, 105);
+  color: #fff;
+  padding: 30px 0px 30px 25px;
+  background-color: #333;
+  opacity: 0.6;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer-links ul {
+  list-style: none;
+ 
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #7b63a3;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+footer .copyright {
+  font-size: 13px;
+  line-height: 20px;
+  color: #f1f1f1;
+}
+/* footer 끝 */

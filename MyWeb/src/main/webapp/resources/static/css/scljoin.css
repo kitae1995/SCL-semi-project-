@@ -1,0 +1,106 @@
+ body {
+        font-family: 'Arial', sans-serif;
+      
+        background-color: #f2f2f2;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+        background-image: url('../img/st2.jpg');
+        background-size: cover;
+      }
+
+      .login-container {
+        background-color: #fff;
+        padding: 20px 40px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        background-color: rgba( 255, 255, 255, 0.5 );
+        margin: 100px;
+       
+        
+        
+      }
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin: 10px 0;
+      }
+
+      .form-group a {
+        text-decoration: none; /* Remove the underline */
+        color: #fff;
+      }
+
+      .form-group a:hover {
+        color: #fff;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+      }
+
+      input {
+       
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        margin: 0px 1px;
+        font-weight: bold;
+        width: 350px;
+      }
+
+      .login-button,
+      .register-button {
+        background-color: #4f3b7a;
+        color: #fff;
+        border: none;
+        padding: 10px 10px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .login-button a,
+      .register-button a {
+        color: #fff;
+      }
+
+      .login-button:hover,
+      .register-button:hover {
+        background-color: #caaaff;
+      }
+
+      .register-link {
+        margin-top: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #4f3b7a;
+        font-weight: bold;
+        font-size:20px
+      }
+
+      #checkDuplicate {
+        background-color: #4f3b7a;
+        color: #fff;
+        border: none;
+        padding: 7px 15px;
+        font-size: 12px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      #checkDuplicate:hover {
+        background-color: #caaaff;
+      }

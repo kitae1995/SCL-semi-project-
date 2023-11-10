@@ -5,35 +5,35 @@
 		<item key="DIALOG_Y_ORIGIN" value="392"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=""/>
+		<item key="selection" value="/body"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="glyphicon glyphicon-share-alt"/>
-			<item value="ps"/>
-			<item value="&lt;div id=&quot;map&quot; style=&quot;width"/>
-			<item value="app"/>
-			<item value="glyphicon glyphicon-comment"/>
-			<item value="cnt"/>
-			<item value="$cnt"/>
-			<item value="좋아요"/>
-			<item value="contentDiv"/>
-			<item value="#likeBtn"/>
-			<item value="scljoin"/>
-			<item value="SclJoin"/>
-			<item value="users"/>
-			<item value="user"/>
+			<item value="/body"/>
+			<item value="비밀번호를"/>
+			<item value="submit"/>
+			<item value="유효"/>
 			<item value="joinBtn"/>
+			<item value="input-group-addon"/>
+			<item value="input-group"/>
+			<item value="userPhone1"/>
+			<item value="form-group"/>
+			<item value="msgId"/>
+			<item value="a href"/>
+			<item value="a href=&quot;${pageContext.request.contextPath}&quot;"/>
+			<item value=".link-inner #delBtn"/>
+			<item value="삭제"/>
+			<item value="addplace"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="715"/>
-		<item key="DIALOG_Y_ORIGIN" value="434"/>
+		<item key="DIALOG_X_ORIGIN" value="1382"/>
+		<item key="DIALOG_Y_ORIGIN" value="401"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="403"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

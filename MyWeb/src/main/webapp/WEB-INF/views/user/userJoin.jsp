@@ -1,18 +1,24 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+   
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입 페이지</title>
 
-<%@ include file="../include/header.jsp" %>
-
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-9 col-sm-12 join-form">
-                <div class="titlebox">
-                    회원가입
-                </div>
-                <form action="${pageContext.request.contextPath}/user/join" method="post" name="joinForm">
-                    <div class="form-group">
-                        <!--사용자클래스선언-->
+     
+    <link
+      rel="stylesheet"
+      href="${pageContext.request.contextPath}/css/scljoin.css"
+    />
+</head>
+<body>
+ <div class="login-container">
+      <h2>회원가입</h2>
+      <form action="${pageContext.request.contextPath}/user/join" method="post" name="joinForm">
+        <div class="form-group">
+          <!--사용자클래스선언-->
                         <label for="id">아이디</label>
                         <div class="input-group">
                             <!--input2탭의 input-addon을 가져온다 -->
@@ -23,40 +29,37 @@
                         </div>
                         <span id="msgId"></span>
                         <!--자바스크립트에서 추가-->
-                    </div>
-                    <div class="form-group">
-                        <!--기본 폼그룹을 가져온다-->
+        </div>
+        <div class="form-group">
+          <!--기본 폼그룹을 가져온다-->
                         <label for="password">비밀번호</label>
                         <input type="password" name="userPw" class="form-control" id="userPw"
                             placeholder="비밀번호 (영 대/소문자, 숫자 조합 8~16자 이상)">
                         <span id="msgPw"></span>
                         <!--자바스크립트에서 추가-->
-                    </div>
-                    <div class="form-group">
-                        <label for="password-confrim">비밀번호 확인</label>
+        </div>
+        <div class="form-group">
+          <label for="password-confrim">비밀번호 확인</label>
                         <input type="password" class="form-control" id="pwConfirm" placeholder="비밀번호를 확인해주세요.">
                         <span id="msgPw-c"></span>
                         <!--자바스크립트에서 추가-->
-                    </div>
-                    <div class="form-group">
-                        <label for="name">이름</label>
+        </div>
+        <div class="form-group">
+          <label for="name">이름</label>
                         <input type="text" name="userName" class="form-control" id="userName" placeholder="이름을 입력하세요.">
-                    </div>
-                    <!--input2탭의 input-addon을 가져온다 -->
-                    <div class="form-group">
-                        <label for="hp">휴대폰번호</label>
-                        <div class="input-group">
-                            <select name="userPhone1" class="form-control phone1" id="userPhone1">
-                                <option>010</option>
-                                <option>011</option>
-                                <option>017</option>
-                                <option>018</option>
-                            </select>
-                            <input type="text" name="userPhone2" class="form-control phone2" id="userPhone2" placeholder="휴대폰번호를 입력하세요.">
-                        </div>
-                    </div>
-                    <div class="form-group email-form">
-                        <label for="email">이메일</label><br>
+        </div>
+        <div class="form-group">
+          <label for="phone"> 전화번호</label>
+          <input
+            type="text"
+            id="userPhone2"
+            name="userPhone2"
+            required
+            placeholder="휴대폰번호를 입력하세요."
+          />
+        </div>
+        <div class="form-group email-form">
+           <label for="email">이메일</label><br>
                         <div class="input-group">
                             <input type="text" name="userEmail1" class="form-control" id="userEmail1" placeholder="이메일">
                             <select name="userEmail2" class="form-control" id="userEmail2">
@@ -74,43 +77,34 @@
 						<input type="text" class="form-control mail-check-input" placeholder="인증번호 6자리를 입력하세요."
 							maxlength="6" disabled="disabled">
 						<span id="mail-check-warn"></span>
+						 
+        </button>
+      </form>
+      <p class="register-link">
+        이미 회원이신가요? <a href="${pageContext.request.contextPath}/user/userLogin">로그인</a>
+      </p>
+      <button
+				          type="button"
+				          id="joinBtn"
+				          class="register-button"
+				        >
+				           가입하기
+				        </button>
+				       
+				        <button
+				          type="button"
+				          class="register-button"
+				        >
+				          <a href="${pageContext.request.contextPath}/user/userLogin"> 가입취소</a>
 					</div>
+		  </div>
+		  
+	
 
-                    <!--readonly 속성 추가시 자동으로 블락-->
-                    <div class="form-group">
-                        <label for="addr-num">주소</label>
-                        <div class="input-group">
-                            <input type="text" name="addrZipNum" class="form-control" id="addrZipNum" placeholder="우편번호" readonly>
-                            <div class="input-group-addon">
-                                <button type="button" class="btn btn-primary" onclick="searchAddress()">주소찾기</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="addrBasic" class="form-control" id="addrBasic" placeholder="기본주소" readonly>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="addrDetail" class="form-control" id="addrDetail" placeholder="상세주소">
-                    </div>
 
-                    <!--button탭에 들어가서 버튼종류를 확인한다-->
-                    <div class="form-group">
-                        <button type="button" id="joinBtn" class="btn btn-lg btn-success btn-block">회원가입</button>
-                    </div>
-
-                    <div class="form-group">
-                        <button type="button" class="btn btn-lg btn-info btn-block">로그인</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-<%@ include file="../include/footer.jsp" %>
-
-<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<script>
+	
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	<script>
     let code = ''; // 이메일 전송 인증번호 저장을 위한 변수.
     let idFlag, pwFlag; // 정규표현식 유효성 검사 여부 판단.
 
@@ -351,11 +345,11 @@
         var regex = /^[A-Za-z0-9+]{8,16}$/;
         if (regex.test(document.getElementById("userPw").value)) {
             document.getElementById("userPw").style.borderColor = "green";
-            document.getElementById("msgPw").innerHTML = "사용가능합니다";
+            document.getElementById("msgPw").innerHTML = "";
             pwFlag = true;
         } else {
             document.getElementById("userPw").style.borderColor = "red";
-            document.getElementById("msgPw").innerHTML = "비밀번호를 제대로 입력하세요.";
+            document.getElementById("msgPw").innerHTML = "";
             pwFlag = false;
         }
     }
@@ -366,12 +360,18 @@
         var regex = /^[A-Za-z0-9+]{8,16}$/;
         if (document.getElementById("pwConfirm").value == document.getElementById("userPw").value) {
             document.getElementById("pwConfirm").style.borderColor = "green";
-            document.getElementById("msgPw-c").innerHTML = "비밀번호가 일치합니다";
+            document.getElementById("msgPw-c").innerHTML = "";
             pwFlag = true;
         } else {
             document.getElementById("pwConfirm").style.borderColor = "red";
-            document.getElementById("msgPw-c").innerHTML = "비밀번호 확인란을 확인하세요";
+            document.getElementById("msgPw-c").innerHTML = "";
             pwFlag = false;
         }
     }
 </script>
+</body>
+</html>
+
+    
+    
+    

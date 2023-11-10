@@ -30,6 +30,9 @@ public class UserController {
 	@GetMapping("/userJoin")
 	public void userJoin() {}
 	
+	@GetMapping("/myPage")
+	public void myPage() {}
+	
 	//아이디 중복 확인(비동기)
 	/*
 	 @PathVariable은 URL 경로에 변수를 포함시켜 주는 방식
@@ -100,6 +103,8 @@ public class UserController {
 		rs.addFlashAttribute("msg", "updateSuccess");
 		return "redirect:/user/userMypage";
 	}
+	
+	
 	
 	
 

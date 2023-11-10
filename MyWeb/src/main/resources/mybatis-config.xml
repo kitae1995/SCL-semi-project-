@@ -26,6 +26,8 @@
 		<typeAlias type="com.spring.myweb.snsboard.entity.SnsBoard" alias="sns" />
 		<typeAlias type="com.spring.myweb.sclboard.entity.SclBoard" alias="sclboard" />
 		<typeAlias type="com.spring.myweb.scluser.entity.SclUser" alias="scluser" />
+		<typeAlias type="com.spring.myweb.sclmain.entity.Place" alias="place" />
+		
 		
 	</typeAliases>
 
