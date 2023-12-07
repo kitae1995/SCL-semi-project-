@@ -33,6 +33,9 @@ public class UserController {
 	@GetMapping("/myPage")
 	public void myPage() {}
 	
+	@GetMapping("/seoul2")
+	public void seoul2() {}
+	
 	//아이디 중복 확인(비동기)
 	/*
 	 @PathVariable은 URL 경로에 변수를 포함시켜 주는 방식

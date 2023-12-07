@@ -13,7 +13,7 @@
       <h1>서울시 문화공간 소개</h1>
       <p>서울의 다양한 문화공간을 탐험하고 소개합니다.</p>
       <button class="explore-button">
-        <a href="${pageContext.request.contextPath}/user/userLogin">나와 같이 로그인 하러 가지 않을래?</a>
+        <a href="${pageContext.request.contextPath}/user/userLogin">문화공간 찾으러가기</a>
       </button>
     </main>
   </body>

@@ -25,6 +25,7 @@ public class Place {
 	private String phone;
 	private String memberId;
 	private LocalDateTime regDate;
+	private int num;
 
 }
 

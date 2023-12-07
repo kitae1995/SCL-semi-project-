@@ -6,8 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>서울시 문화공간 소개</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
     <link href="${pageContext.request.contextPath }/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="${pageContext.request.contextPath }/css/styles.css">
+    <script src="${pageContext.request.contextPath }/js/bootstrap.js"></script>
 </head>
 <body>
     <!-- Header -->

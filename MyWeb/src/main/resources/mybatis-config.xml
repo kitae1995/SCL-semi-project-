@@ -27,6 +27,8 @@
 		<typeAlias type="com.spring.myweb.sclboard.entity.SclBoard" alias="sclboard" />
 		<typeAlias type="com.spring.myweb.scluser.entity.SclUser" alias="scluser" />
 		<typeAlias type="com.spring.myweb.sclmain.entity.Place" alias="place" />
+		<typeAlias type="com.spring.myweb.sclmain.entity.Place2" alias="place2" />
+		<typeAlias type="com.spring.myweb.gogo.entity.Gogo" alias="gogo" />
 		
 		
 	</typeAliases>

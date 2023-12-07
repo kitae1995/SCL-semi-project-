@@ -355,6 +355,7 @@ function removeAllChildNods(el) {
     const placeRaddr = placeAddr.nextElementSibling;
     const placeTel = placeAddr.nextElementSibling.nextElementSibling;
     
+    
    
     // console.log('가게명: ', placeName.textContent);
     // console.log('주소: ', placeAddr.textContent);

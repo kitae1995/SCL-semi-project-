@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.spring.myweb.freeboard.dto.page.Page;
 import com.spring.myweb.sclmain.entity.Place;
+import com.spring.myweb.sclmain.entity.Place2;
 
 public interface IMapMapper {
 
@@ -16,8 +17,13 @@ public interface IMapMapper {
 	
 	void insertMapList(Place place);
 	
+	void insertMapList2(Place2 place2);
+	
 	//글 목록
 	List<Place> getList(Page page);
+	
+	//글 목록
+	List<Place2> getList2(Page page);
 		
 	//총 게시물 개수 구하기
 	int getTotal(Page page);

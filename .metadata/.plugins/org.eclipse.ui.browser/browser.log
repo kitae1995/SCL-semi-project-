@@ -316,3 +316,18 @@
 
 11월 10, 2023 16:13:40.107 NEW SESSION
 11월 10, 2023 16:13:40.107 [6004:8628:1110/161340.107:ERROR:sharing_service.cc(250)] Device un-registration failed with fatal error
+
+11월 11, 2023 17:38:05.575 NEW SESSION
+11월 11, 2023 17:38:05.575 [3060:9124:1111/173805.561:ERROR:device_event_log_impl.cc(192)] [17:38:05.561] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+11월 11, 2023 18:04:20.472 [8756:4952:1111/180420.472:ERROR:get_updates_processor.cc(263)] PostClientToServerMessage() failed during GetUpdates with error Network error (ERR_ABORTED)
+11월 11, 2023 19:25:10.401 [15372:5240:1111/192510.401:ERROR:device_event_log_impl.cc(192)] [19:25:10.401] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+
+11월 12, 2023 16:10:49.560 NEW SESSION
+11월 12, 2023 16:10:49.560 [7384:12876:1112/161049.540:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 307 in 295-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)
+11월 12, 2023 16:10:49.563 [7384:12876:1112/161049.540:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 307 in 295-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)
+11월 12, 2023 16:11:25.823 [7384:12876:1112/161125.822:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 320 in 295-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)
+11월 12, 2023 16:11:25.823 [7384:12876:1112/161125.822:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 320 in 295-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)
+11월 12, 2023 16:11:35.919 [7384:12876:1112/161135.918:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 307 in 295-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)
+11월 12, 2023 16:11:35.919 [7384:12876:1112/161135.918:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 307 in 295-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)
+11월 12, 2023 16:54:25.985 [8996:11032:1112/165425.984:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 347 in 334-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)
+11월 12, 2023 16:54:25.986 [8996:11032:1112/165425.984:ERROR:CONSOLE(1)] "Uncaught (in promise) RangeError: Invalid line number 347 in 334-line document", source: devtools://devtools/bundled/devtools-frontend/front_end/third_party/codemirror.next/chunk/codemirror.js (1)

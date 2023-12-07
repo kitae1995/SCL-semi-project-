@@ -10,12 +10,11 @@ body {
 
 /*header 왼쪽 로고랑 매뉴버튼들 */
 .header-nav {
-  background-color: rgb(44, 16, 105);
+  background-color: rgba(51, 51, 51, 0.5); /* 여기서 마지막 값은 투명도를 나타내며 0.5는 50%의 투명도를 가집니다. */
   color: #fff;
-  padding: 15px 0px 0px 0px;
+  padding: 15px 0;
   margin-bottom: -10px;
-  opacity: 0.5;
-  background-color: #333;
+  font-weight: bold;
 }
 
 .header-nav img {
@@ -25,7 +24,7 @@ body {
 
 .logo a {
   text-decoration: none;
-  color: #fff;
+  color: white;
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
@@ -43,7 +42,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: white;
   font-weight: bold;
   font-size: 20px;
   transition: color 0.3s;
@@ -52,6 +51,11 @@ body {
 .nav-links a:hover {
   color: #caaaff;
 }
+#gogo{
+	font-weight: bold;
+	color: black;
+}
+
 /*header 왼쪽 로고랑 매뉴버튼들 끝*/
 
 /*header 오른쪽 상단 사이드 바 스크롤 */
@@ -65,7 +69,7 @@ body {
   margin: 24px 0;
   transition: 0.4s;
   position: absolute; /* 절대 위치 설정 */
-  top: 37px; /* 상단에 위치하도록 설정 */
+  top: 17px; /* 상단에 위치하도록 설정 */
   right: 15px;
 }
 
@@ -88,17 +92,18 @@ body {
 .menu-button {
   display: flex;
   justify-content: flex-end; /* .bar를 오른쪽으로 이동 */
+  right: 0%;
 }
 
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 104px; /* 원하는 위치로 조정하세요. */
-  right: 0px;
-  background-color: #4f3b7a;
+  opacity: 0.6;
+  background-color: #333;
   width: 150px; /* 드롭다운 메뉴의 너비를 조정하세요. */
   z-index: 1;
   border-top: 1px solid black;
+  justify-content: flex-end;
 }
 
 .dropdown-menu ul {
@@ -127,6 +132,8 @@ body {
 /* 메뉴 버튼 클릭 시 드롭다운 메뉴 표시 */
 .menu-button.active + .dropdown-menu {
   display: block;
+  position: absolute;
+  right: 0%;
 }
 
 /* header 오른쪽 상단 사이드 바 스크롤 끝 */
@@ -142,6 +149,7 @@ body {
   padding: 30px 0px 30px 25px;
   background-color: #333;
   opacity: 0.6;
+    z-index: 1;
 }
 
 .footer-content {

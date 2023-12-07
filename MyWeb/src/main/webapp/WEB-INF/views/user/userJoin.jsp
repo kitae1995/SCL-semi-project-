@@ -123,61 +123,7 @@
             return;
         }
 
-        /*
-        // 아이디 중복확인 비동기 요청 준비
-        const xhr = new XMLHttpRequest();
-
-        //서버 요청 정보 설정
-        xhr.open('GET', `${pageContext.request.contextPath}/user/\${userId}`);
-        xhr.send();
-
-        xhr.onload = function() {
-            console.log(xhr.status);
-            console.log(xhr.response);
-            if(xhr.response === 'duplicated') {
-                alert('아이디가 중복되었습니다.');
-            }
-        }
-        */
-
-        /*
-            # fetch API: 자바스크립트에서 제공하는 비동기 통신 함수.
-            - Promise 객체를 자동으로 리턴하여 손쉽게 통신의 응답데이터를
-             소비할 수 있게 해 줍니다.
-             (Promise: 비동기 통신의 결과 및 통신의 순서를 보장하는 객체)
-            - fetch 함수가 리턴하는 Promise 객체는 단순히 응답 JSON 데이터가 아닌
-             전체적이고, 포괄적인 응답 정보를 가지고 있습니다.
-            - 따라서, 서버가 응답한 여러 정보 중 JSON 데이터만 소비하려면 
-             json()이라는 메서드를 사용합니다.
-            - 단순 문자열 데이터라면 text() 메서드를 사용합니다.
-            
-           
-            //fetch('url', {요청 관련 정보를 담은 객체(GET방식에서는 따로 전달 안함.)})
-            fetch('${pageContext.request.contextPath}/user/' + userId)
-            //Promise 객체의 상태가 요청 성공일 시 데이터 후속 처리 진행.
-            .then(res => {
-                //fetch 함수를 통해 비동기 통신이 실행되고,
-                //요청이 완료된 후 then()의 매개값으로 응답에 관련된 함수를
-                //콜백 방식으로 전달합니다. (function(res) -> 화살표 함수로 간단히 표현)
-                //함수의 매개변수를 선언하면 해당 매개변수로 응답에 관련된
-                //전반적인 정보를 가진 응답 정보가 전달됩니다.
-                console.log(res);
-                console.log('서버가 전달한 데이터: ', res.text());
-                return res.text(); //서버가 전달한 데이터를 Promise형태로 리턴.
-            })
-            //위에 배치된 then() 함수가 먼저 실행될 것을 강제.
-            //그 이후에 나중에 배치된 then()이 실행되게끔 메서드 체인링 방식으로 작성.
-            //통신이 성공했다는 것을 먼저 보장받은 후, 서버의 데이터를 꺼내는 콜백함수를 실행.
-            .then(data => {
-                console.log('data: ', data);
-            })
-            .catch(error => { //통신 과정에서 에러가 발생했을 경우에만 실행되는 함수.
-                console.log('error: ', error);
-            });
-            */
-
-        //비동기 요청을 fetch()로 보내고 결과를 확인하기.
-        //화살표 함수 내의 코드가 한 줄이고, 그것이 return이라면 괄호와 return 생략 가능
+       
         fetch('${pageContext.request.contextPath}/user/id/' + userId)
             .then(res => res.text()) //요청 완료 후 응답 정보에서 텍스트 데이터가 담긴 Promise 반환.
             .then(data => { //텍스트 데이터만 담긴 Promise 객체로부터 data를 전달받음.
@@ -219,12 +165,9 @@
         .catch(error => {
             console.log(error);
             alert('알 수 없는 문제가 발생했습니다. 관리자에게 문의하세요!');
-        }); // 비동기 끝.
+        }); 
 
-    }; //이메일 인증 버튼 클릭 이벤트 끝
-
-    //인증번호 검증
-    //blur -> focus가 벗어나는 경우 발생.
+    }; 
     document.querySelector('.mail-check-input').onblur = function(e) {
         // console.log('blur 이벤트 발생 확인!');
         const inputCode = e.target.value; //사용자가 입력한 인증번호.

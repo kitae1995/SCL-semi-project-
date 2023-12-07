@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+ <mapper namespace="com.spring.myweb.gogo.mapper.IGogoMapper">
+ 
+ 	<resultMap type="gogo" id="gogoMap">
+		<result property="xCoord" column="x_coord" />
+        <result property="yCoord" column="y_coord" />
+        <result property="num" column="num" />
+        <result property="addr" column="addr" />
+        <result property="facDesc" column="fac_desc"  javaType="java.lang.String"/>
+        <result property="openHour" column="openhour" />
+        <result property="busStop" column="busstop" />
+        <result property="enterFree" column="enterfree" />
+        <result property="closeDay" column="closeday" />
+        <result property="homePage" column="homepage" />
+        <result property="facName" column="fac_name" />
+        <result property="etcDesc" column="etc_desc" />
+        <result property="subWay" column="subway" />
+        <result property="phne" column="phne" />
+        <result property="mainImg" column="main_img" />
+        <result property="enterFee" column="enter_fee" />
+        <result property="openDay" column="open_day" />
+        <result property="subJCode" column="subjcode" />
+        <result property="kate" column="kate" />
+        
+	</resultMap>
+
+	 
+	 <select id="getKate" resultMap="gogoMap">
+	 	SELECT *
+	 	FROM slocation
+	 	WHERE kate = #{kate}
+	 </select>
+	
+	 <select id = "getDetail" resultMap="gogoMap">
+	 	SELECT * 
+	 	FROM slocation s
+	 	JOIN place2 p
+	 	ON s.num = p.num
+	 	WHERE p.num = #{num}
+	 </select>
+	 
+</mapper>

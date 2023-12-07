@@ -2481,7 +2481,7 @@ legend {
   margin-bottom: 20px;
   font-size: 21px;
   line-height: inherit;
-  color: #333;
+  color: purple;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -2998,7 +2998,7 @@ select[multiple].form-group-lg .form-control {
 .btn:hover,
 .btn:focus,
 .btn.focus {
-  color: #333;
+  color: purple;
   text-decoration: none;
 }
 .btn:active,
@@ -3019,7 +3019,7 @@ fieldset[disabled] .btn {
   opacity: .65;
 }
 .btn-default {
-  color: #333;
+  color: purple;
   background-color: #fff;
   border-color: #ccc;
 }
@@ -3029,7 +3029,7 @@ fieldset[disabled] .btn {
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  color: #333;
+  color: purple;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
@@ -3061,7 +3061,7 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-default .badge {
   color: #fff;
-  background-color: #333;
+  background-color: purple;
 }
 .btn-primary {
   color: #fff;
@@ -3446,7 +3446,7 @@ tbody.collapse.in {
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
-  color: #333;
+  color: purple;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,

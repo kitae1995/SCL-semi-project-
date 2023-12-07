@@ -1,4 +1,6 @@
 INDEX VERSION 1.131
+C:\Mywork\spring-work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2357233423.index
+\MyWeb\src\main\resources
 C:\Mywork\spring-work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\63811477.index
 \MyWeb\src\main\resources
 C:\Mywork\spring-work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\849103956.index
@@ -12,6 +14,8 @@ C:\Mywork\spring-work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2241
 C:\Mywork\spring-work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2135040790.index
 \MyWeb\src\main\resources
 C:\Mywork\spring-work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\739899774.index
+\MyWeb\src\main\resources
+C:\Mywork\spring-work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\695956539.index
 \MyWeb\src\main\resources
 C:\Mywork\spring-work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\17292577.index
 \MyWeb\src\main\resources

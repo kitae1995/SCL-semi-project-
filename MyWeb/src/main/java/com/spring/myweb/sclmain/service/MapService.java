@@ -7,8 +7,11 @@ import org.springframework.stereotype.Service;
 
 import com.spring.myweb.freeboard.dto.page.Page;
 import com.spring.myweb.sclmain.dto.PlaceListResponseDTO;
+import com.spring.myweb.sclmain.dto.PlaceListResponseDTO2;
 import com.spring.myweb.sclmain.dto.PlaceRequestDTO;
+import com.spring.myweb.sclmain.dto.PlaceRequestDTO2;
 import com.spring.myweb.sclmain.entity.Place;
+import com.spring.myweb.sclmain.entity.Place2;
 import com.spring.myweb.sclmain.mapper.IMapMapper;
 
 import lombok.RequiredArgsConstructor;
@@ -52,22 +55,43 @@ public class MapService {
 //		return mapper.selectMapList(userId,address);
 //	}
 	
-	//찜한 장소 추가
-	public void insertMapList(PlaceRequestDTO dto) {
+//	//찜한 장소 추가
+//	public void insertMapList(PlaceRequestDTO dto) {
+//		//mapper.insertMapList(place);
+//		mapper.insertMapList(Place.builder()
+//				.name(dto.getName())
+//				.address(dto.getAddress())
+//				.phone(dto.getPhone())
+//				.memberId(dto.getMemberId())
+//				.build());
+//	}
+	
+	//찜한 장소 추가 ( 마커 합본 )
+	public void insertMapList2(PlaceRequestDTO2 dto2) {
 		//mapper.insertMapList(place);
-		mapper.insertMapList(Place.builder()
-				.name(dto.getName())
-				.address(dto.getAddress())
-				.phone(dto.getPhone())
-				.memberId(dto.getMemberId())
+		mapper.insertMapList2(Place2.builder()
+				.name(dto2.getName())
+				.phone(dto2.getPhone())
+				.title(dto2.getTitle())
+				.memberId(dto2.getMemberId())
+				.num(dto2.getNum())
 				.build());
 	}
 	
-	public List<PlaceListResponseDTO> getList(Page page) {
-		List<PlaceListResponseDTO> dtoList = new ArrayList<>();
-		List<Place> list = mapper.getList(page);
-		for(Place place : list) {
-			dtoList.add(new PlaceListResponseDTO(place));
+//	public List<PlaceListResponseDTO> getList(Page page) {
+//		List<PlaceListResponseDTO> dtoList = new ArrayList<>();
+//		List<Place> list = mapper.getList(page);
+//		for(Place place : list) {
+//			dtoList.add(new PlaceListResponseDTO(place));
+//		}
+//		return dtoList;
+//	}
+//	
+	public List<PlaceListResponseDTO2> getList2(Page page) {
+		List<PlaceListResponseDTO2> dtoList = new ArrayList<>();
+		List<Place2> list = mapper.getList2(page);
+		for(Place2 place2 : list) {
+			dtoList.add(new PlaceListResponseDTO2(place2));
 		}
 		return dtoList;
 	}
@@ -80,6 +104,8 @@ public class MapService {
 		mapper.delete(bno);
 
 	}
+
+	
 	
 	
 	

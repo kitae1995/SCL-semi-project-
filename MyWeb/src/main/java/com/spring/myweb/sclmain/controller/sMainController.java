@@ -8,13 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.spring.myweb.freeboard.dto.page.Page;
 import com.spring.myweb.freeboard.dto.page.PageCreator;
 import com.spring.myweb.sclmain.dto.PlaceRequestDTO;
-import com.spring.myweb.sclmain.entity.Place;
+import com.spring.myweb.sclmain.dto.PlaceRequestDTO2;
 import com.spring.myweb.sclmain.service.MapService;
 
 import lombok.RequiredArgsConstructor;
@@ -38,6 +37,9 @@ public class sMainController {
 	@GetMapping("/s_main3")
 	public void stest3() {}
 	
+	@GetMapping("/s_mainF")
+	public void stestF() {}
+	
 	@GetMapping("/mapMypage")
 	public void mapMypage(Page page, Model model) {
 		System.out.println("/sclmain/mapMypage: GET!");
@@ -52,7 +54,7 @@ public class sMainController {
 			creator = new PageCreator(page, totalCount);			
 		}
 		
-		model.addAttribute("boardList", service.getList(page));
+		model.addAttribute("boardList", service.getList2(page));
 		model.addAttribute("pc", creator);
 	}
 	
@@ -84,6 +86,25 @@ public class sMainController {
        
         return new ResponseEntity<>("Error processing data", HttpStatus.INTERNAL_SERVER_ERROR);
 	}
+}
+	
+	 //찜하기
+		@PostMapping("/addplace2") 
+		@ResponseBody
+		public ResponseEntity<String> addplace2(@RequestBody PlaceRequestDTO2 dto2) { 
+		
+		try {
+//			String id = reqObj.getMemberId();
+//	        String name = reqObj.getName();
+//	        String addr = reqObj.getAddress();
+//	        String tel = reqObj.getPhone();
+	        log.info("controller: {}", dto2);
+	        service.insertMapList2(dto2);
+	        return new ResponseEntity<>("Data received successfully", HttpStatus.OK);
+	    } catch (Exception e) {
+	       
+	        return new ResponseEntity<>("Error processing data", HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 		
 		
 	}

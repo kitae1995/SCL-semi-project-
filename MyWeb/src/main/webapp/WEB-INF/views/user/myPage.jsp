@@ -19,15 +19,15 @@
             <button
               type="button"
               class="edit"
-            >
-              회원 정보 수정
+            ><a href="${pageContext.request.contextPath}/sclmain/s_mainF">
+              문화공간 찾기
             </button>
           </div>
           <div class="button-group">
             <button
               type="button"
               class="like"
-            >
+            ><a href="${pageContext.request.contextPath}/sclmain/mapMypage">
               찜 목록
             </button>
           </div>

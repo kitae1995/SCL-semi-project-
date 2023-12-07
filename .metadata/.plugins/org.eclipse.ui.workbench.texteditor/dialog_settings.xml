@@ -5,28 +5,28 @@
 		<item key="DIALOG_Y_ORIGIN" value="392"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="/body"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="/body"/>
-			<item value="비밀번호를"/>
-			<item value="submit"/>
-			<item value="유효"/>
-			<item value="joinBtn"/>
-			<item value="input-group-addon"/>
-			<item value="input-group"/>
-			<item value="userPhone1"/>
-			<item value="form-group"/>
-			<item value="msgId"/>
-			<item value="a href"/>
-			<item value="a href=&quot;${pageContext.request.contextPath}&quot;"/>
-			<item value=".link-inner #delBtn"/>
-			<item value="삭제"/>
-			<item value="addplace"/>
+			<item value="slocation"/>
+			<item value="목록"/>
+			<item value="div.nav"/>
+			<item value=".navbar-hea"/>
+			<item value="#333"/>
+			<item value="purple"/>
+			<item value="#333333"/>
+			<item value="color"/>
+			<item value="미우스를"/>
+			<item value="미우스"/>
+			<item value="마우스"/>
+			<item value="마커"/>
+			<item value="마우스를"/>
+			<item value="reqobj"/>
+			<item value="reqObj"/>
 		</list>
 		<list key="replacehistory">
 		</list>
